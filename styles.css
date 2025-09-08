@@ -1,0 +1,29 @@
+#btn1, #btn2, #btn3 {
+    height: 50px;
+    width: 300px;
+}
+#contentWindow {
+
+    display: flex;
+    align-items: flex-end;
+    width: 1240px;
+    height: 1000px;
+    border: 4px solid indianred;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    /*margin: 20px auto;*/
+    overflow-y: auto; /* allows scrolling if content is long */
+    border-radius: 8px;
+}
+.button-group {
+    padding: 1px;
+    display: inline-flex;
+    flex-direction: column;   /* stack buttons vertically */
+    gap: 25px;
+    margin-top: -800px;
+}
+.canvas-container {
+    display: flex;          /* side-by-side layout */
+    align-items: center;  /* align children (buttons + canvas) to bottom */
+    gap: 20px;              /* space between canvas and buttons */
+}
