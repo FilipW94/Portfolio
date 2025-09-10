@@ -6,21 +6,26 @@
     <title>$Title$</title>
 </head>
 <body>
-<div class="canvas-container"> 
-
-    <div class="button-group">
-        <button id="btn1">Button 1</button>
-        <button id="btn2">Button 2</button>
-        <button id="btn3">Button 3</button>
-        
+<div class="canvas-container">
+    <div class="button-groups-leftSide">
+        Content
+        <div class="button-group" id="buttonGroupContent">
+            <button id="content-button1" class = "text-style-button">Common UI</button>
+            <button id="content-button2" class = "text-style-button">Widget Effects</button>
+            <button id="content-button3" class = "text-style-button">Dino Dynasty Digital</button>
+            <button id="content-button4" class = "text-style-button">Becoming Whole</button>
+        </div>
+        Other
+        <div class="button-group" id="buttonGroupOther">
+            <button id="btn4">Button 1</button>
+            <button id="btn5">Button 2</button>
+            <button id="btn6">Button 3</button>
+        </div>
     </div>
-    <div class="button-group">
-        <button id="btn4">Button 1</button>
-        <button id="btn5">Button 2</button>
-        <button id="btn6">Button 3</button>
 
-    </div>
-    <canvas id="contentWindow" width="500" height="300"></canvas>
+    <div id="contentWindow" class="content-window"></div>
+    <div id="projectInfoWindow" class="project-info"></div>
+    
 </div>
 <script src="script.js"></script>
 </body>
