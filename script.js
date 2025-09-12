@@ -16,7 +16,19 @@ const pages = {
     page4: `
         <h2>Becoming Whole</h2>
         <p>Some thoughtful content here.</p>
-    `
+    `,
+    page5: `
+        <h2>Other 1</h2>
+        <p>Other 1 text</p>
+    `,
+    page6: `
+        <h2>Other 2</h2>
+        <p>Other 2 text</p>
+    `,
+    page7: `
+        <h2>Other 3</h2>
+        <p>Other 3 text</p>
+    `,
 };
 
 // Attach event listeners
@@ -32,3 +44,13 @@ document.getElementById('content-button3').addEventListener('click', () => {
 document.getElementById('content-button4').addEventListener('click', () => {
     contentWindow.innerHTML = pages.page4;
 });
+document.getElementById('other-button1').addEventListener('click', () => {
+    contentWindow.innerHTML = pages.page5;
+});
+document.getElementById('other-button2').addEventListener('click', () => {
+    contentWindow.innerHTML = pages.page6;
+});
+document.getElementById('other-button3').addEventListener('click', () => {
+    contentWindow.innerHTML = pages.page7;
+});
+    

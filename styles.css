@@ -1,4 +1,4 @@
-#content-button1, #content-button2, #content-button3, #content-button4, #btn4, #btn5, #btn6 {
+#content-button1, #content-button2, #content-button3, #content-button4, #other-button1, #other-button2, #other-button3 {
     height: 50px;
     width: 300px;
     border: 3px solid black;
@@ -22,7 +22,7 @@
 .button-groups-leftSide {
     display: flex;
     flex-direction: column; /* stack the two groups vertically */
-    gap: 20px;
+    gap: 5px;
 }
 
 .button-group {
@@ -31,7 +31,7 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 #projectInfoWindow {
     width: 150px;
@@ -47,5 +47,29 @@
     font-weight: 500;
     color: #333;
     line-height: 1.6;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+}
+.avatar {
+    margin: 50px 85px 50px 85px; /* Top - Right - Bottom - Left */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.name {
+    padding-top: 50px;
+    font-family: 'Arial', sans-serif;
+    font-size: 55px;
+}
+.PortfolioContent {
+    margin: 0 0 10px 0;
+    font-family: 'times New Roman', Times, serif;
+    padding-left: 100px;
+}
+.PortfolioOther {
+    margin: 25px 0 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 110px;
 }
