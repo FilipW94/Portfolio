@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black; /* fallback when no bg layer is visible */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 #content-button1, #content-button2, #content-button3, #content-button4, #other-button1, #other-button2, #other-button3 {
     height: 50px;
     width: 300px;
@@ -6,12 +13,16 @@
     
 }
 .content-window {
-    width: 1240px;
-    height: 1000px;
+    width: 70vw;         /* 80% of viewport width */
+    /*max-width: 1240px;   !* never exceed original size *!*/
+    height: 70vh;        /* 80% of viewport height */
+    /*max-height: 1000px;  !* never exceed original size *!*/
     border: 4px solid black;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     overflow-y: auto;
+
+    box-sizing: border-box; /* keeps padding inside width */
 }
 .canvas-container {
     display: flex;
@@ -34,8 +45,10 @@
     gap: 20px;
 }
 #projectInfoWindow {
-    width: 150px;
-    height: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 20vh;
+    height: 30vh;
     border: 4px solid black;
     border-radius: 8px;
     padding: 20px;
@@ -62,6 +75,10 @@
     padding-top: 50px;
     font-family: 'Arial', sans-serif;
     font-size: 55px;
+    text-shadow: 
+            -1px -1px 0 white,
+            1px 1px 0 white;
+
 }
 .PortfolioContent {
     margin: 0 0 10px 0;
@@ -72,4 +89,64 @@
     margin: 25px 0 10px 0;
     font-family: 'Times New Roman', Times, serif;
     padding-left: 110px;
+}
+/* Shared background layer setup */
+.background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1; /* behind content */
+    background-size: 150%; /* zooms in 1.5x */
+    background-repeat: no-repeat;
+    opacity: 0; /* fade controlled per layer */
+    animation: fade 30s infinite;
+}
+
+.bg1 {
+    background-image: url("Images/LVL_001_Section1.png");
+    animation: panBLTR 25s linear infinite,
+    fade 100s ease-in-out infinite;
+    /* no delay for bg1 */
+}
+
+.bg2 {
+    background-image: url("Images/LVL_001_Section2.png");
+    animation: panBRTL 25s linear infinite,
+    fade 100s ease-in-out infinite;
+    animation-delay: 0s, 25s; /* pan starts immediately, fade is staggered */
+}
+
+.bg3 {
+    background-image: url("Images/LVL_001_Section2_2.png");
+    animation: panTLBR 25s linear infinite,
+    fade 100s ease-in-out infinite;
+    animation-delay: 0s, 50s;
+}
+
+.bg4 {
+    background-image: url("Images/LVL_001_Section3.png");
+    animation: panTLBR 25s linear infinite,
+    fade 100s ease-in-out infinite;
+    animation-delay: 0s, 75s;
+}
+/* Fade effect */
+@keyframes fade {
+    0%, 15%   { opacity: 1; }
+    20%, 100% { opacity: 0; }
+}
+
+/* Diagonal pan keyframes */
+@keyframes panBLTR { /* bottom-left → top-right */
+    from { background-position: 0% 100%; }
+    to   { background-position: 100% 0%; }
+}
+
+@keyframes panBRTL { /* bottom-right → top-left */
+    from { background-position: 100% 100%; }
+    to   { background-position: 0% 100%; }
+}
+
+@keyframes panTLBR { /* top-left → bottom-right */
+    from { background-position: 0% 0%; }
+    to   { background-position: 100% 100%; }
 }
