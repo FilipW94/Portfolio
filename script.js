@@ -2,7 +2,7 @@ const contentWindow = document.getElementById('contentWindow');
 
 const pages = {
     page1: `
-        <h2>Common UI</h2>
+        <h2 class="RegularText">Common UI</h2>
         <p>Welcome to the first page of content.</p>
     `,
     page2: `
@@ -31,7 +31,6 @@ const pages = {
     `,
 };
 
-// Attach event listeners
 document.getElementById('content-button1').addEventListener('click', () => {
     contentWindow.innerHTML = pages.page1;
 });
