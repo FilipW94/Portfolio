@@ -1,159 +1,89 @@
-.RegularText {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    color: floralwhite;
-    text-shadow: -1px -1px 0 black,  1px 1px 0 black;
-}
 body {
     margin: 0;
-    padding: 0;
-    background: black; /* fallback when no bg layer is visible */
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-#content-button1, #content-button2, #content-button3, #content-button4, #other-button1, #other-button2, #other-button3 {
-    height: 50px;
-    width: 300px;
-    border: 3px solid black;
-    border-radius: 5px;
-}
-.content-window {
-    width: 70vw;         /* 70% of viewport width */
-    height: 70vh;        /* 70% of viewport height */
-    border: 2px white solid;
-    background-color: rgba(0, 0, 0, .95); /*Black with 95% opacity*/
-    border-radius: 8px;
-    padding: 10px;
-    overflow-y: auto;
-    box-sizing: border-box; /* keeps padding inside width */
-}
-.canvas-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; /* space between button column and canvas */
+    background-color: #f0f0f0;
 }
 
-.button-groups-leftSide {
-    display: flex;
-    flex-direction: column; /* stack the two groups vertically */
-    gap: 5px;
-}
-
-.button-group {
-    border-radius: 15px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border: 2px white solid;
-    background-color: rgba(0, 0, 0, .95);
-}
-#projectInfoWindow {
-    margin-right: 10px;
-    margin-left: 10px;
-    width: 20vh;
-    height: 30vh;
-    border: 2px white solid;
-    background-color: rgba(0, 0, 0, .95);
-    border-radius: 8px;
-    padding: 20px;
-    overflow-y: auto;
-}
-.text-style-button {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-    line-height: 1.6;
-    letter-spacing: 1px;
-}
-.avatar {
-    margin: 50px 85px 50px 85px; /* Top - Right - Bottom - Left */
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-.name {
-    padding-top: 50px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 55px;
-    color: floralwhite;
-    text-shadow: 
-            -1px -1px 0 black,
-            1px 1px 0 black;
-
-}
-.PortfolioContent {
-    margin: 0 0 10px 0;
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 100px;
-    color: floralwhite;
-    text-shadow:
-            -2px -2px 0 black,
-            2px 2px 0 black;
-    
-}
-.PortfolioOther {
-    margin: 25px 0 10px 0;
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 110px;
-    color: floralwhite;
-}
-/* Panning Background -- GPJG*/
-.background {
+.navbar {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1; /* behind content */
-    background-size: 150%; /* zooms in 1.5x */
-    background-repeat: no-repeat;
-    opacity: 0; /* fade controlled per layer */
-    animation: fade 30s infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    border-bottom: 2px solid rgb(25,25,25);
+
+    display: flex;
+    align-items: center;       /* vertical centering */
+    justify-content: space-between; /* left/right alignment */
+    padding: 0 30px;           /* horizontal padding */
+    box-sizing: border-box;
+    z-index: 1000;
+    background: linear-gradient(
+            to bottom,
+            rgb(17,17,17) 0%,
+            rgb(17,17,17) 100%
+    );
+    transition: height 0.15s ease-in-out, background 0.15s ease-in-out;
 }
-.bg1 {
-    background-image: url("Images/LVL_001_Section1.png");
-    animation: panBLTR 25s linear infinite,
-    fade 100s ease-in-out infinite;
+.navbar.scrolled {
+    height: 65px;
+    background: linear-gradient(
+            to bottom,
+            rgb(17,17,17) 0,           /* top 0% solid dark */
+            rgb(17,17,17) 85%,          /* still solid until 75% */
+            rgba(35,35,35,1) 100%     /* last 25% slightly transparent */
+    );
 }
-.bg2 {
-    background-image: url("Images/LVL_001_Section2.png");
-    animation: panBRTL 25s linear infinite,
-    fade 100s ease-in-out infinite;
-    animation-delay: 0s, 25s;
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: rgb(25,25,25);
 }
-.bg3 {
-    background-image: url("Images/LVL_001_Section2_2.png");
-    animation: panTLBR 25s linear infinite,
-    fade 100s ease-in-out infinite;
-    animation-delay: 0s, 50s;
+.navbar .nav-button {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    color: rgb(200,200,200);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
 }
-.bg4 {
-    background-image: url("Images/LVL_001_Section3.png");
-    animation: panTLBR 25s linear infinite,
-    fade 100s ease-in-out infinite;
-    animation-delay: 0s, 75s;
+.nav-title {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;         /* name size */
+    font-weight: 700;         /* bold name */
+    background-color: rgba(0,0,0,0);
+    color: rgb(200,200,200);
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
 }
-/* Fade effect */
-@keyframes fade {
-    0%, 15%   { opacity: 1; }
-    20%, 100% { opacity: 0; }
+.content {
+    margin-top: 90px; /* pushes content below fixed navbar */
+    padding: 20px 40px;
+    color: rgb(220,220,220); /* light text for dark background */
+    max-width: 900px;
+    line-height: 1.6;
 }
 
-/* Diagonal pan keyframes */
-@keyframes panBLTR { /* bottom-left → top-right */
-    from { background-position: 0% 100%; }
-    to   { background-position: 100% 0%; }
+/* Role inside the button */
+.nav-title .nav-role {
+    font-weight: 400;        /* thinner than name */
+    font-size: 25px;         /* optional smaller size */
+    margin-left: 6px;        /* small spacing after name */
+}
+.nav-right {
+    display: flex;
+    align-items: center;
 }
 
-@keyframes panBRTL { /* bottom-right → top-left */
-    from { background-position: 100% 100%; }
-    to   { background-position: 0% 100%; }
-}
-
-@keyframes panTLBR { /* top-left → bottom-right */
-    from { background-position: 0% 0%; }
-    to   { background-position: 100% 100%; }
+/* Optional: hover effect */
+.nav-button:hover {
+    /*background-color: rgba(200,200,200,0.1);*/
+    text-decoration: underline;
 }

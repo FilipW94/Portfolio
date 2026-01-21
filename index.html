@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
-    <title>$Title$</title>
-    
+    <title>Filip Wilhelmsson Portfolio</title>
+
+    <!-- Connect CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-    <!--MOVING BACKGROUND IMAGES - START-->
-<div class="background bg1"></div>
-<div class="background bg2"></div>
-<div class="background bg3"></div>
-<div class="background bg4"></div>
-    <!--MOVING BACKGROUND IMAGES - END-->
-    
-    <!--PROFILE PIC AND NAME - START-->
-<div class="canvas-container">
-    <img class="avatar" src="Images/FilipWilhelmsson.jpg" alt="Profile pic">
-    <h1 class="name">Filip Wilhelmsson</h1>
-</div>
-    <!--PROFILE PIC AND NAME - END-->
-<div class="canvas-container">
-    <div class="button-groups-leftSide">
-        <!--        BUTTON GROUP CONTENT  - START      -->
-        <h1 class = "PortfolioContent">Portfolio</h1>
-        <div class="button-group" id="buttonGroupContent"> 
-            <button id="content-button1" class = "text-style-button">Common UI</button>
-            <button id="content-button2" class = "text-style-button">Widget Effects</button>
-            <button id="content-button3" class = "text-style-button">Dino Dynasty Digital</button>
-            <button id="content-button4" class = "text-style-button">Becoming Whole</button>
-        </div>
-        <!--        BUTTON GROUP CONTENT  - END      -->
 
-        <!--        BUTTON GROUP OTHER  - START      -->
-        <h1 class = "PortfolioOther">Other</h1>
-        <div class="button-group" id="buttonGroupOther">
-            <button id="other-button1" class = "text-style-button">Other 1</button>
-            <button id="other-button2" class = "text-style-button">Other 2</button>
-            <button id="other-button3" class = "text-style-button">Other 3</button>
-        </div>
-        <!--        BUTTON GROUP OTHER  - END      -->
+<!-- Navbar -->
+<div class="navbar">
+    <button class="nav-title" onclick="location.href='index.html'">
+        Filip Wilhelmsson |<span class="nav-role"> Technical & UI/UX Designer</span>
+    </button>
+    <div class="nav-right">
+        <button class="nav-button" onclick="location.href='portfolio.html'">Portfolio</button>
+        <button class="nav-button" onclick="location.href='resume.html'">Resume</button>
+        <button class="nav-button" onclick="location.href='contact.html'">Contact</button>
+        <button class="nav-button" onclick="location.href='about.html'">About me</button>
     </div>
-
-    <div id="contentWindow" class="content-window"></div>
-    <div id="projectInfoWindow" class="project-info"></div>
-    
 </div>
+
+<div class="content">
+    <h1>About Me</h1>
+    <p>This is the About Me page. You can put some text here describing yourself.</p>
+</div>
+
+
 <script src="script.js"></script>
 </body>
+<!-- Connect JavaScript -->
+<script src="script.js"></script>
 </html>
