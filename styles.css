@@ -122,7 +122,7 @@ html, body {
 
 .content-window {
     max-width: 1050px;           /* keeps text readable on wide screens */
-    width: 90%;                 /* scales on smaller screens */
+    width: 100%;                 /* scales on smaller screens */
     margin: 100px auto 50px auto; /* center horizontally */
     padding: 20px;              /* internal spacing */
     color: rgb(220,220,220);
