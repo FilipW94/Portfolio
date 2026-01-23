@@ -8,6 +8,15 @@
     margin: 0 0 20px 0;         /* top:0, bottom:20px */
     font-weight: 300;           /* spacing after the text */
 }
+.info-text-bold {
+    font-family: 'Calibri Light', Times, serif;
+    font-size: 20px;           /* readable size */
+    color: rgb(220,220,220);   /* matches your dark theme */
+    line-height: 1.3;          /* spacing for readability */
+    text-align: left;         /* optional: center text by default */
+    margin: 0 0 20px 0;         /* top:0, bottom:20px */
+    font-weight: 700;           /* spacing after the text */
+}
 .about-text {
     flex: 1 1 500px;              /* flexible width, minimum 500px */
     min-width: 300px;             /* don’t shrink too small on mobile */
@@ -18,7 +27,7 @@
     font-weight: 700;
     color: rgb(220,220,220);
     text-align: left;
-    margin: 0 0 10px 0;
+    margin: 0 0 -5px 0;
 }
 .category-text {
     font-family: 'Calibri Light', Times, serif;
@@ -185,11 +194,86 @@ html, body {
     margin-right: 8px;
 }
 .separator {
-    width: 900px;                 /* fixed, reusable width */
-    height: 1px;                  /* line thickness */
+    width: 100%;                 /* match content width */
+    height: 1px;
     background-color: rgba(220,220,220, 0.5);
-
-    margin: 40px auto;            /* centers horizontally */
+    margin: 20px 0;
     opacity: 0.7;
 }
 
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.role-text {
+    font-family: 'Calibri Light', Times, serif;
+    font-size: 18px;
+    color: rgb(180,180,180);
+}
+
+.portfolio-layout {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Left column */
+.portfolio-left {
+    flex: 1 1 55%;
+}
+
+/* Right column */
+.portfolio-right {
+    flex: 1 1 45%;
+}
+
+/* Main image */
+.main-image {
+    width: 100%;
+    height: 260px;
+    border: 1px solid rgba(220,220,220,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-family: 'Calibri Light', Times, serif;
+    color: rgb(200,200,200);
+}
+
+/* Image thumbnails */
+.image-row {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb {
+    flex: 1;
+    height: 90px;
+    border: 1px solid rgba(220,220,220,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(200,200,200);
+}
+
+.overview-highlights {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.text-box {
+    flex: 1;
+}
+.portfolio-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-link:hover .header-text {
+    text-decoration: underline;
+}
