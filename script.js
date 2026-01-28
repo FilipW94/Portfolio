@@ -6,5 +6,16 @@ window.addEventListener("scroll", function() {
     } else {
         navbar.classList.remove("scrolled");
     }
+
 });
 
+function changeImage(thumbnail) {
+    const mainImage = document.getElementById("mainImage");
+    mainImage.src = thumbnail.src;
+
+    document.querySelectorAll(".thumb").forEach(img => {
+        img.classList.remove("active");
+    });
+
+    thumbnail.classList.add("active");
+}
