@@ -5,7 +5,7 @@
     <title>Portfolio - Filip Wilhelmsson</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body> 
 
 <!-- Navbar -->
 <div class="navbar">
@@ -24,76 +24,104 @@
 
     <div class="portfolio-header">
         <a href="dino-dynasty-evolved.html" class="portfolio-link">
-            <h2 class="header-text">Dino Dynasty Evolved</h2>
+            <h2 class="header-text">Dino Dynasty: Evolved</h2>
         </a>
     </div>
+    
+    <div class="box banner" id="banner-container">
+        <button class="banner-btn left" onclick="prevBanner()">&#10094;</button>
+        <img id="DDE_Banner" src="Images/DDE_Banner.png" alt="DDE Banner">
+        <button class="banner-btn right" onclick="nextBanner()">&#10095;</button>
+    </div>
+    <div class="content-row">
 
-    <div class="separator"></div>
-
-    <!-- Main layout -->
-    <div class="portfolio-layout">
-
-        <!-- Left column -->
-        <div class="portfolio-left">
-
-            <div class="overview-highlights">
-
-                <div class="text-box">
-                    <p class="info-text">
-                        <span class="info-text-bold">Status:</span> In development<br>
-                        <span class="info-text-bold">Engine:</span> Unreal Engine 5<br>
-                        <span class="info-text-bold">Role:</span> UI/UX Designer<br>
-                        <span class="info-text-bold">Duration:</span> May – Dec 2025<br>
-                        <span class="info-text-bold">Developer:</span> ION Game Design
-                    </p>
+        <!-- Column A -->
+        <div class="content-column">
+            <div class="box project-details">
+                <p class="text preview-header">Details
+                <p class="text preview-content">
+                <div class="text-row">
+                    <span class="label details">Status:</span>
+                    <span class="value details">In Development</span>
                 </div>
-
-                <div class="text-box">
-                    <p class="info-text">
-                        <span class="info-text-bold">Highlights:</span><br>
-                        UI/UX Design<br>
-                        Blueprint Scripting<br>
-                        C++ Programming 
-                    </p>
+                <div class="text-row">
+                    <span class="label details">Engine:</span>
+                    <span class="value details">Unreal Engine 5</span>
                 </div>
-
+                <div class="text-row">
+                    <span class="label details">Role:</span>
+                    <span class="value details">UI/UX Designer</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Duration:</span>
+                    <span class="value details">May - Dec 2025</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Developer:</span>
+                    <span class="value details">ION Game Design</span>
+                </div>
+                
             </div>
+            <div class="box project-subjects">
+                <p class="text preview-header">Subjects
+                <div class="category-image-block">
+                    <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
+                    <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
+                </div>
+                <div class="category-image-block">
+                    <img id="UE5 Blueprint" class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+                    <img id="C++" class="category-image" src="Images/C++.png" alt="C++">
+                    <img id="UI Art" class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
 
-            <p class="info-text">
-                <span class="info-text-bold">Project Description:</span><br>
-                Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.
-                Lead your herd through the Cretaceous era as you explore diverse biomes, battle 
-                rival species, and unlock new abilities to survive and dominate.<br>
-            <p class="info-text">
-                <a href="https://www.kickstarter.com/projects/455725875/dino-dynasty-evolve?lang=en" target="_blank" class="text-link">
-                    Check out Dino Dynasty Evolved on Kickstarter!
-                </a>
-            </p>
-
+                </div>
+            </div>
+        </div>
+        <!-- Column B -->
+        <div class="content-column">
+            <div class="box project-description">
+                <p class="text preview-header">Description
+                <p class="text preview-content">
+                    Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.
+                    Lead your herd through the Cretaceous era as you explore diverse biomes, battle
+                    rival species, and unlock new abilities to survive and dominate.<br><br>
+                <p class="text preview-content">
+                    <a href="https://www.kickstarter.com/projects/455725875/dino-dynasty-evolve?lang=en" target="_blank" class="text-link">
+                        Check out Dino Dynasty Evolved on Kickstarter!
+                    </a>
+                </p>
+            </div>
+            <div class="box button">
+                <div class="box button">
+                    <a href="dino-dynasty-evolved.html" class="view-project">View Project</a>
+                </div>
+            </div> 
         </div>
 
-        <!-- Right column -->
-        <div class="portfolio-right">
-
-            <!-- Main image -->
-            <div class="main-image">
-                <img id="mainImage" src="Images/DDE_Poster.png" alt="Main project image">
+        <!-- Column C -->
+        <div class="content-column">
+            <div class="box contribution">
+                <p class="text preview-header">Contribution
+                <p class="text preview-content">
+                -Layout and Mock-ups<br>
+<!--                -Writing down programmer tasks related to UI.<br>-->
+                -Creating asset lists for UI elements.<br>
+                -Assisting during play tests<br>
+                -Popup System<br>
+                -Prompt System<br>
+                -Acquisition Log<br>
+                -Ability Button visuals<br>
+                -Healthbar visuals<br>
+                -Fixing UI bugs<br>
+                -UI Navigation (KBM and Controller)<br>
+                -Making UI materials<br>
+                -UI animations.<br>
+                -Controller feedback
             </div>
-
-            <!-- Thumbnails -->
-            <div class="image-row">
-                <img src="Images/DDE_Poster.png" class="thumb" onclick="changeImage(this)">
-                <img src="Images/DDE_Evolutions.png" class="thumb" onclick="changeImage(this)">
-                <img src="Images/DDE_HUD.png" class="thumb" onclick="changeImage(this)">
-            </div>
-
         </div>
 
     </div>
-
-    <div class="separator"></div>
-
 </div>
+
 
 <script src="script.js"></script>
 </body>

@@ -31,99 +31,187 @@
     </div>
 
     <div class="separator"></div>
-
-    <!-- Main layout -->
-    <div class="portfolio-layout">
+    
+    <div class="two-column-container">  <!--Row 1-->
 
         <!-- Left column -->
-        <div class="portfolio-left">
+        <div class="column left-column" style="width: 350px; height: 375px;">
+            <div class="text-box">
+                <p class="info-text">
+                    <span class="info-text-bold">Status:</span> In development<br>
+                    <span class="info-text-bold">Engine:</span> Unreal Engine 5<br>
+                    <span class="info-text-bold">Role:</span> UI/UX Designer<br>
+                    <span class="info-text-bold">Duration:</span> May – Dec 2025<br>
+                    <span class="info-text-bold">Developer:</span> ION Game Design<br>
 
-            <div class="overview-highlights">
-
-                <div class="text-box">
-                    <p class="info-text">
-                        <span class="info-text-bold">Status:</span> In development<br>
-                        <span class="info-text-bold">Engine:</span> Unreal Engine 5<br>
-                        <span class="info-text-bold">Role:</span> UI/UX Designer<br>
-                        <span class="info-text-bold">Duration:</span> May – Dec 2025<br>
-                        <span class="info-text-bold">Developer:</span> ION Game Design
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="info-text">
-                        <span class="info-text-bold">Highlights:</span><br>
-                        UI/UX Design<br>
-                        Blueprint Scripting<br>
-                        C++ Programming
-                    </p>
-                </div>
-
+                <div class="category-image-block">
+                <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
+                <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
             </div>
-
-            <p class="info-text">
+                <div class="category-image-block">
+                    <img id="UE5 Blueprint" class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+                    <img id="C++" class="category-image" src="Images/C++.png" alt="C++">
+                    <img id="UI Art" class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
+                    
+                </div>
+                <br><br><br><br>
                 <span class="info-text-bold">Project Description:</span><br>
-                Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.
-                Lead your herd through the Cretaceous era as you explore diverse biomes, battle
-                rival species, and unlock new abilities to survive and dominate.<br><br>
-                
-                Dino Dynasty Evolved is a game i worked on for 8 months between May-December 2025. 
-                Which was expected to be about half of the production time.
-                I was there in a intern capacity, and initially i was meant to work as system/tech designer. 
-                But since i had been thinking of switching to UI/UX design with focus on implementation and 
-                the more technical side, i reached out to our contact person at the company and asked to be 
-                in charge of UI for the project. To which they agreed.<br><br>
-
-                
-                <span class="info-text-bold">Inter-Project Collaboration:</span><br>
-                During my time at  ION i worked very closely with several other departments to accomplish 
-                my tasks. including:<br>
-                -Other members of the design discipline but other with other specializations.<br>
-                -The 2D artist in charge of making the UI art, who was also the projects art lead.<br>
-                -Programmers. Who i either supplied with specifics and needs of a UI element. Or direct <br>
-                collaboration during prototyping/implementation where we share progress and discoveries.<br><br>
-
-
-                
-                <span class="info-text-bold">UI Design tasks and responsibilities:</span><br>
-                -Mock-ups (Miro and Figma)<br>
-                -Writing down programmer tasks related to UI<br>
-                -Creating asset lists for UI elements, with dimensions.<br>
-                -Assisting during play tests<br><br>
-            
-                <span class="info-text-bold">Technical UI Design tasks and responsibilities:</span><br>
-                Technical UI Design Tasks and responsibilities<br>
-                -Implementations, mainly widgets. (In both blueprint and C++)<br>
-                -Popup System<br>
-                -Prompt System<br>
-                -Acquisition Log<br>
-                -Ability Button visuals<br>
-                -Health Indicator visuals<br>
-                -Fixing UI bugs
-                -Setting up UI Navigation (KBM and Controller)<br>
-                -Making UI materials in Unreal Engines material editor<br>
-                -UI animations.<br>
-                -Controller feedback<br>
-
-
-        </div>
-
-        <!-- Right column -->
-        <div class="portfolio-right">
-
-            <!-- Main image -->
-            <div class="main-image">
-                <img id="mainImage" src="Images/DDE_Poster.png" alt="Main project image">
             </div>
             
+        </div>
+        <!-- Right column -->
+        <div class="column right-column" style="width: 640px; height: 375px;">
+                    <div class="main-image">
+                        <img id="mainImage" src="Images/DDE_Poster.png" alt="Main project image">
+                    </div>
+        </div>
+
+    </div>
+    <div class="column left-column" style="width: 350px; height: 375px;">
+        <div class="text-box">
+            <p class="info-text">
+                <span class="info-text-bold">Status:</span> In development<br>
 
         </div>
-        
 
     </div>
 
 
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
+
+<!--&lt;!&ndash; Main layout &ndash;&gt;-->
+<!--<div class="portfolio-layout">-->
+
+<!--    &lt;!&ndash; Left column &ndash;&gt;-->
+<!--    <div class="portfolio-left">-->
+
+<!--        <div class="overview-highlights">-->
+
+<!--            <div class="text-box">-->
+<!--                <p class="info-text">-->
+<!--                    <span class="info-text-bold">Status:</span> In development<br>-->
+<!--                    <span class="info-text-bold">Engine:</span> Unreal Engine 5<br>-->
+<!--                    <span class="info-text-bold">Role:</span> UI/UX Designer<br>-->
+<!--                    <span class="info-text-bold">Duration:</span> May – Dec 2025<br>-->
+<!--                    <span class="info-text-bold">Developer:</span> ION Game Design-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            <div class="text-box">-->
+<!--                <p class="info-text">-->
+<!--                    <span class="info-text-bold">Highlights:</span><br>-->
+<!--                    UI/UX Design<br>-->
+<!--                    Blueprint Scripting<br>-->
+<!--                    C++ Programming-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--        <p class="info-text">-->
+<!--            <span class="info-text-bold">Project Description:</span><br>-->
+<!--            Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.-->
+<!--            Lead your herd through the Cretaceous era as you explore diverse biomes, battle-->
+<!--            rival species, and unlock new abilities to survive and dominate.<br><br>-->
+
+<!--            Dino Dynasty Evolved is a game i worked on for 8 months between May-December 2025.-->
+<!--            Which was expected to be about half of the production time.-->
+<!--            I was there in a intern capacity, and initially i was meant to work as system/tech designer.-->
+<!--            But since i had been thinking of switching to UI/UX design with focus on implementation and-->
+<!--            the more technical side, i reached out to our contact person at the company and asked to be-->
+<!--            in charge of UI for the project. To which they agreed.<br><br>-->
+
+
+<!--            <span class="info-text-bold">Inter-Project Collaboration:</span><br>-->
+<!--            During my time at  ION i worked very closely with several other departments to accomplish-->
+<!--            my tasks. including:<br>-->
+<!--            -Other members of the design discipline but other with other specializations.<br>-->
+<!--            -The 2D artist in charge of making the UI art, who was also the projects art lead.<br>-->
+<!--            -Programmers. Who i either supplied with specifics and needs of a UI element. Or direct <br>-->
+<!--            collaboration during prototyping/implementation where we share progress and discoveries.<br><br>-->
+
+
+
+<!--            &lt;!&ndash;                <span class="info-text-bold">UI Design tasks and responsibilities:</span><br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Mock-ups (Miro and Figma)<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Writing down programmer tasks related to UI<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Creating asset lists for UI elements, with dimensions.<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Assisting during play tests<br><br>&ndash;&gt;-->
+<!--            &lt;!&ndash;            &ndash;&gt;-->
+<!--            &lt;!&ndash;                <span class="info-text-bold">Technical UI Design tasks and responsibilities:</span><br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                Technical UI Design Tasks and responsibilities<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Implementations, mainly widgets. (In both blueprint and C++)<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Popup System<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Prompt System<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Acquisition Log<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Ability Button visuals<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Health Indicator visuals<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Fixing UI bugs&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Setting up UI Navigation (KBM and Controller)<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Making UI materials in Unreal Engines material editor<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -UI animations.<br>&ndash;&gt;-->
+<!--            &lt;!&ndash;                -Controller feedback<br>&ndash;&gt;-->
+
+
+
+<!--    </div>-->
+<!--    <div class="category-container">-->
+
+<!--        &lt;!&ndash; Left: category list &ndash;&gt;-->
+<!--        <div class="category-list">-->
+<!--            <button class="category-button active" onclick="showCategory('ui', this)">-->
+<!--                UI Design-->
+<!--            </button>-->
+<!--            <button class="category-button" onclick="showCategory('technical', this)">-->
+<!--                Technical UI-->
+<!--            </button>-->
+<!--            <button class="category-button" onclick="showCategory('collaboration', this)">-->
+<!--                Collaboration-->
+<!--            </button>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Right: category content &ndash;&gt;-->
+<!--        <div class="category-content">-->
+
+<!--            <div id="ui" class="category-panel active">-->
+<!--                <p class="info-text">-->
+<!--                    UI design focused on clarity, hierarchy, and readability.-->
+<!--                    Created mockups in Figma and Miro, iterated through playtests,-->
+<!--                    and worked closely with art direction.-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            <div id="technical" class="category-panel">-->
+<!--                <p class="info-text">-->
+<!--                    Implemented UI widgets in Unreal Engine using Blueprint and C++,-->
+<!--                    including navigation, prompts, popups, and animated feedback systems.-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            <div id="collaboration" class="category-panel">-->
+<!--                <p class="info-text">-->
+<!--                    Worked cross-disciplinarily with designers, programmers, and artists,-->
+<!--                    ensuring UI requirements were clear, feasible, and well-documented.-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    &lt;!&ndash; Right column &ndash;&gt;-->
+<!--    <div class="portfolio-right">-->
+
+<!--        &lt;!&ndash; Main image &ndash;&gt;-->
+<!--        <div class="main-image">-->
+<!--            <img id="mainImage" src="Images/DDE_Poster.png" alt="Main project image">-->
+<!--        </div>-->
+
+
+
+<!--    </div>-->
+
+
+<!--</div>-->
