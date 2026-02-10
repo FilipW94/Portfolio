@@ -31,13 +31,10 @@
     padding-top: 20px;
     padding-bottom: 10px;
 }
-.category-text {
-    font-family: 'Calibri Light', Times, serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: rgb(220,220,220);
+.header-text.center {
     text-align: center;
 }
+
 .nav-title {
     display: flex;
     align-items: center;
@@ -105,7 +102,6 @@
 body {
     margin: 0;
     background-color: rgb(20,20,20);
-
     background-image: url("Images/Background1.png");
     background-size: cover;        /* fills the screen */
     background-position: center;   /* centers image */
@@ -244,12 +240,6 @@ html, body {
     opacity: 0.7;
 }
 
-.portfolio-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
 .role-text {
     font-family: 'Calibri Light', Times, serif;
     font-size: 18px;
@@ -260,16 +250,6 @@ html, body {
     display: flex;
     gap: 50px;
     align-items: center;
-}
-
-/* Left column */
-.portfolio-left {
-    flex: 1 1 55%;
-}
-
-/* Right column */
-.portfolio-right {
-    flex: 1 1 45%;
 }
 
 /* Main image */
@@ -292,18 +272,6 @@ html, body {
 .image-row {
     display: flex;
     gap: 10px;
-}
-
-.thumb {
-    flex: 1;
-    height: 90px;
-    border: 1px solid rgba(220,220,220,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    color: rgb(200,200,200);
 }
 
 .overview-highlights {
