@@ -26,7 +26,6 @@
 
     <h1 class="header-text">Dino Dynasty Evolved</h1>
     <div class="content-row">
-
 <!--        PROJECT DETAILS-->
         <div class="content-column">
             <div class="box project-info-left">
@@ -70,7 +69,7 @@
             
         </div>
             <div class="box project-images">
-                <img id="DDE Kickstarter poster" src="Images/DDE_Kickstarter_Poster.png" alt="DDE Kickstarter Poster">
+                <img id="DDE Kickstarter poster" src="Images/DDE_Kickstarter_Poster.png" alt="DDE Kickstarter Poster" class="clickable-image">
             </div>
     </div>
 <!--    DESCRIPTION-->
@@ -166,11 +165,11 @@
             Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout i opted for was:
         </p>
         <ul class="text preview-content list">
-            <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (LB/RB)</li>
-            <li>Some windows have sub tabs, namely settings and skill tree. These are navigated through using the shoulder triggers. (LT/RT)</li>
-            <li>Elements within each tab are navigated between using left stick or D-PAD.</li>
+            <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (<strong class="strong-text blue">LB</strong>/<strong class="strong-text blue">RB</strong>)</li>
+            <li>Some windows have sub tabs, namely settings and skill tree. These are navigated through using the shoulder triggers. (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
+            <li>Elements within each tab are navigated between using left stick or <strong class="strong-text blue">D-PAD</strong>.</li>
             <li>Elements are interacted with either by navigating to and then pressing the A button. Or by direct bindings done 
-                through the CommonUI plugin. When using direct bindings the button will respond to the bound input as long as 
+                through the <strong class="strong-text blue">CommonUI plugin</strong>. When using direct bindings the button will respond to the bound input as long as 
                 the parent widget is focused and activated.</li>
         </ul>
         <br>
@@ -180,11 +179,10 @@
         <p class="text preview-content">
             The Figma layout here is representative of how the in-game UI looked when my internship ended. Unfortunately there were still some sections 
             I didn't have time to improve upon. <br><br>
-            <strong>However.</strong>
-             Some of the pages have alternate versions that show what they were planned to look like while working there, or improvements 
+            Some of the pages have <strong class="strong-text blue">Alternate versions</strong> that show what they were planned to look like while working there, or improvements 
             I've come up with since my internship ended.
             <br><br>
-            Below you can view what the in-game UI looked like when my internship ended.
+            Below you can view the state of the <strong class="strong-text blue">in-game UI</strong> when my internship ended.
         </p>
         <br>
         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/BTrwFnspFiNObq0IGRnApv/DD-E-GameMenu?node-id=1-32&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A32&embed-host=share" allowfullscreen></iframe>
@@ -200,11 +198,40 @@
         </div>
         <br>
         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/Cu24wYwmL-Q" title ="Ability Preview" allowfullscreen></iframe>
+        <br><br>
+        <p class="text preview-content">
+            The Popup system was made to be reusable everywhere and has 2 available buttons.
+            The default button that is always visible is <strong class="strong-text blue">Confirm</strong>. The second optional button 
+            is a <strong class="strong-text red">Cancel</strong> button. The popup widget also has an <strong>OnPopupReply</strong> event that returns a 
+            boolean. This can be used to run different logic depending on the return value.
+            <br><br>
+            General uses for the Popup is to display information that you need to make sure the player doesn't miss, 
+            hence why its removal is dependent on input.
+            A specific example of when both the <strong class="strong-text blue">Confirm</strong> and <strong class="strong-text red">Cancel</strong> button 
+            is used is when the player is assigning keybindings via the control settings. If they try to bind a button that already has an active binding, 
+            the <strong class="strong-text blue">Confirm</strong> button will swap the input bindings and save, while <strong class="strong-text red">Cancel</strong> 
+            will prevent the action. Both inputs then close the popup.
+            <br><br>
+            The Popup widget can also display an <strong class="strong-text blue">Image</strong> or <strong class="strong-text blue">Video</strong>. 
+            This can further clarify new mechanics or systems that simple text might struggle to convey. In DDE we opted to use short ability previews
+            on the popup whenever a player unlocked a new base ability. As well as making them viewable from their corresponding skill tree 
+            by pressing <strong class="strong-text blue">Y</strong>. This helped the player grasp the ability quicker than just reading.
+            <br><br>
+            Below you have a typical setup when using the <strong class="strong-text blue">popup system</strong>. You create the widget and 
+            call an <strong class="strong-text blue">interface function</strong> on the <strong class="strong-text blue">HUD</strong> class attached 
+            to the <strong class="strong-text blue">player controller</strong>. This will safely open the widget above any other UI elements and set 
+            focus on the widget.
+            <br><br>
+        </p>
+            <img id="Popup Usage" src="Images/PopupUsage.png" alt="Popup Usage" class="clickable-image content-image">
 
     </div>
 
-<!--    https://youtu.be/Cu24wYwmL-Q-->
 
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
+    </div>
 </div>
 <script src="script.js"></script>
 </body>
