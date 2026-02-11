@@ -359,6 +359,9 @@ html, body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.text.preview-content.bold {
+    font-weight: bold;
+}
 .text.preview-content.list {
     margin: 10px 0 0 20px;
 }
@@ -425,6 +428,12 @@ html, body {
     height: 250px;
     overflow: hidden;
 }
+.box.banner.dde-game-menu {
+    border: 0;
+    justify-self: center;
+    width: 640px;
+    height: 360px;
+}
 .box.project-details {
     border-top: 0;
     height: 250px;
@@ -459,7 +468,6 @@ html, body {
     border-left: 0;
     border-top: 0;
     border-right: 0;
-    
 }
 .box.project-info-left {
     height: 360px;
@@ -479,6 +487,13 @@ html, body {
     height: 300px;
     border-top: 0;
     border-bottom: 0;
+}
+.box.project-contribution-list {
+    height: 1500px;
+}
+.box.project-contribution-content {
+    width: 710px;
+    height: 1500px;
 }
 
 .text-row {
@@ -525,5 +540,21 @@ html, body {
 .view-project:hover {
     background-color: #81AAFF;
     color: #141414;
+}
+.project-contribution-list li {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.project-contribution-list li:hover {
+    color: #81AAFF;
+}
+
+.project-contribution-list li.active {
+    font-weight: bold;
+    color: #81AAFF;
+}
+.hidden-content {
+    display: none;
 }
 

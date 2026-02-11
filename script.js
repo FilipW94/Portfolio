@@ -40,3 +40,25 @@ function nextBanner() {
 function prevBanner() {
     showBanner(currentBanner - 1);
 }
+document.addEventListener("DOMContentLoaded", function () {
+
+    const listItems = document.querySelectorAll(".project-contribution-list li");
+    const contentBox = document.getElementById("contentBox");
+
+    listItems.forEach(item => {
+        item.addEventListener("click", () => {
+
+            const key = item.getAttribute("data-key");
+            const template = document.getElementById(`${key}-content`);
+
+            if (template) {
+                contentBox.innerHTML = template.innerHTML;
+            }
+
+            // Optional active styling
+            listItems.forEach(li => li.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+
+});

@@ -27,7 +27,7 @@
     <h1 class="header-text">Dino Dynasty Evolved</h1>
     <div class="content-row">
 
-        <!-- Column A -->
+<!--        PROJECT DETAILS-->
         <div class="content-column">
             <div class="box project-info-left">
                 <p class="text preview-header">Details
@@ -54,6 +54,7 @@
                 </div>
                 <br>
                 <p class="text preview-header">Subjects
+<!--                SUBJECTS-->
                 <div class="category-image-block">
                     <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
                     <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
@@ -72,6 +73,7 @@
                 <img id="DDE Kickstarter poster" src="Images/DDE_Kickstarter_Poster.png" alt="DDE Kickstarter Poster">
             </div>
     </div>
+<!--    DESCRIPTION-->
     <div class="content-row">
         <div class="content-column">
             <div class="box project-info-even">
@@ -81,8 +83,15 @@
                     Lead your herd through the Cretaceous era as you explore diverse biomes, battle
                     rival species, and unlock new abilities to survive and dominate.<br><br>
 
+                <p class="text preview-content bold">
+                    <a href="https://www.kickstarter.com/projects/455725875/dino-dynasty-evolve?lang=en" target="_blank" class="text-link">
+                        Check out Dino Dynasty Evolved on Kickstarter!
+                    </a>
+                </p>
+
             </div>
         </div>
+<!--        MY TIME-->
         <div class="content-column">
             <div class="box project-info-even">
                 <p class="text preview-header">My time
@@ -98,6 +107,7 @@
         </div>
 
     </div>
+<!--    INTER-PROJECT COLLABORATION-->
     <div class="content-row">
         <div class="box banner">
             <p class="text preview-header">Inter-project collaboration</p>
@@ -117,156 +127,85 @@
             </ul>
         </div>
     </div>
+<!--    CONTRIBUTION LIST-->
     <div class="content-row">
         <div class="content-column">
-            <div class="box project-info-left">
-                <p class="text preview-header">My Contribution
-                    <br>
+            <div class="box project-contribution-list">
+                <p class="text preview-header">My Contribution</p>
+
+                <ul class="text preview-content list">
+                    <li data-key="layout">Layout and Mock-ups</li>
+                    <li data-key="popup">Popup System</li>
+                    <li data-key="prompt">Prompt System</li>
+                    <li data-key="log">Acquisition Log</li>
+                    <li data-key="ability">Ability Button visuals</li>
+                    <li data-key="health">Health bar visuals</li>
+                    <li data-key="bugs">Fixing UI bugs</li>
+                    <li data-key="navigation">UI Navigation</li>
+                    <li data-key="materials">Making UI materials</li>
+                    <li data-key="animations">UI animations</li>
+                    <li data-key="feedback">Controller feedback</li>
+                </ul>
+                
+                <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
             </div>
-
-        </div>
-        <div class="box project-info-right">
-
-        </div>
         </div>
 
+        <div class="box project-contribution-content" id="contentBox">
+            <p>Select a contribution to see details.</p>
+        </div>
+    </div>
+<!--    CONTRIBUTION CONTENT-->
+    <!--    LAYOUT AND MOCKUPS-->
+    <div id="layout-content" class="hidden-content">
+        <p class="text preview-header">Layout and Mock-ups</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+        </div>
+        <p class="text preview-content">
+            Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout i opted for was:
+        </p>
+        <ul class="text preview-content list">
+            <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (LB/RB)</li>
+            <li>Some windows have sub tabs, namely settings and skill tree. These are navigated through using the shoulder triggers. (LT/RT)</li>
+            <li>Elements within each tab are navigated between using left stick or D-PAD.</li>
+            <li>Elements are interacted with either by navigating to and then pressing the A button. Or by direct bindings done 
+                through the CommonUI plugin. When using direct bindings the button will respond to the bound input as long as 
+                the parent widget is focused and activated.</li>
+        </ul>
+        <br>
+        <p class="text preview-header">Figma</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/uiyeZSYzIKjwv4mn08ja0h/DD-E-Layout?node-id=68-2771&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
+        <br>
+        <p class="text preview-content">
+            The Figma layout here is representative of how the in-game UI looked when my internship ended. Unfortunately there were still some sections 
+            I didn't have time to improve upon. <br><br>
+            <strong>However.</strong>
+             Some of the pages have alternate versions that show what they were planned to look like while working there, or improvements 
+            I've come up with since my internship ended.
+            <br><br>
+            Below you can view what the in-game UI looked like when my internship ended.
+        </p>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/BTrwFnspFiNObq0IGRnApv/DD-E-GameMenu?node-id=1-32&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A32&embed-host=share" allowfullscreen></iframe>
 
+    </div>
+    <!--    POPUP SYSTEM-->
+    <div id="popup-content" class="hidden-content">
+        <p class="text preview-header">Popup System</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+        </div>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/Cu24wYwmL-Q" title ="Ability Preview" allowfullscreen></iframe>
+
+    </div>
+
+<!--    https://youtu.be/Cu24wYwmL-Q-->
 
 </div>
 <script src="script.js"></script>
 </body>
 </html>
-
-<!--&lt;!&ndash; Main layout &ndash;&gt;-->
-<!--<div class="portfolio-layout">-->
-
-<!--    &lt;!&ndash; Left column &ndash;&gt;-->
-<!--    <div class="portfolio-left">-->
-
-<!--        <div class="overview-highlights">-->
-
-<!--            <div class="text-box">-->
-<!--                <p class="info-text">-->
-<!--                    <span class="info-text-bold">Status:</span> In development<br>-->
-<!--                    <span class="info-text-bold">Engine:</span> Unreal Engine 5<br>-->
-<!--                    <span class="info-text-bold">Role:</span> UI/UX Designer<br>-->
-<!--                    <span class="info-text-bold">Duration:</span> May – Dec 2025<br>-->
-<!--                    <span class="info-text-bold">Developer:</span> ION Game Design-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--            <div class="text-box">-->
-<!--                <p class="info-text">-->
-<!--                    <span class="info-text-bold">Highlights:</span><br>-->
-<!--                    UI/UX Design<br>-->
-<!--                    Blueprint Scripting<br>-->
-<!--                    C++ Programming-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--        </div>-->
-
-<!--        <p class="info-text">-->
-<!--            <span class="info-text-bold">Project Description:</span><br>-->
-<!--            Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.-->
-<!--            Lead your herd through the Cretaceous era as you explore diverse biomes, battle-->
-<!--            rival species, and unlock new abilities to survive and dominate.<br><br>-->
-
-<!--            Dino Dynasty Evolved is a game i worked on for 8 months between May-December 2025.-->
-<!--            Which was expected to be about half of the production time.-->
-<!--            I was there in a intern capacity, and initially i was meant to work as system/tech designer.-->
-<!--            But since i had been thinking of switching to UI/UX design with focus on implementation and-->
-<!--            the more technical side, i reached out to our contact person at the company and asked to be-->
-<!--            in charge of UI for the project. To which they agreed.<br><br>-->
-
-
-<!--            <span class="info-text-bold">Inter-Project Collaboration:</span><br>-->
-<!--            During my time at  ION i worked very closely with several other departments to accomplish-->
-<!--            my tasks. including:<br>-->
-<!--            -Other members of the design discipline but other with other specializations.<br>-->
-<!--            -The 2D artist in charge of making the UI art, who was also the projects art lead.<br>-->
-<!--            -Programmers. Who i either supplied with specifics and needs of a UI element. Or direct <br>-->
-<!--            collaboration during prototyping/implementation where we share progress and discoveries.<br><br>-->
-
-
-
-<!--            &lt;!&ndash;                <span class="info-text-bold">UI Design tasks and responsibilities:</span><br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Mock-ups (Miro and Figma)<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Writing down programmer tasks related to UI<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Creating asset lists for UI elements, with dimensions.<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Assisting during play tests<br><br>&ndash;&gt;-->
-<!--            &lt;!&ndash;            &ndash;&gt;-->
-<!--            &lt;!&ndash;                <span class="info-text-bold">Technical UI Design tasks and responsibilities:</span><br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                Technical UI Design Tasks and responsibilities<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Implementations, mainly widgets. (In both blueprint and C++)<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Popup System<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Prompt System<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Acquisition Log<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Ability Button visuals<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Health Indicator visuals<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Fixing UI bugs&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Setting up UI Navigation (KBM and Controller)<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Making UI materials in Unreal Engines material editor<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -UI animations.<br>&ndash;&gt;-->
-<!--            &lt;!&ndash;                -Controller feedback<br>&ndash;&gt;-->
-
-
-
-<!--    </div>-->
-<!--    <div class="category-container">-->
-
-<!--        &lt;!&ndash; Left: category list &ndash;&gt;-->
-<!--        <div class="category-list">-->
-<!--            <button class="category-button active" onclick="showCategory('ui', this)">-->
-<!--                UI Design-->
-<!--            </button>-->
-<!--            <button class="category-button" onclick="showCategory('technical', this)">-->
-<!--                Technical UI-->
-<!--            </button>-->
-<!--            <button class="category-button" onclick="showCategory('collaboration', this)">-->
-<!--                Collaboration-->
-<!--            </button>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Right: category content &ndash;&gt;-->
-<!--        <div class="category-content">-->
-
-<!--            <div id="ui" class="category-panel active">-->
-<!--                <p class="info-text">-->
-<!--                    UI design focused on clarity, hierarchy, and readability.-->
-<!--                    Created mockups in Figma and Miro, iterated through playtests,-->
-<!--                    and worked closely with art direction.-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--            <div id="technical" class="category-panel">-->
-<!--                <p class="info-text">-->
-<!--                    Implemented UI widgets in Unreal Engine using Blueprint and C++,-->
-<!--                    including navigation, prompts, popups, and animated feedback systems.-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--            <div id="collaboration" class="category-panel">-->
-<!--                <p class="info-text">-->
-<!--                    Worked cross-disciplinarily with designers, programmers, and artists,-->
-<!--                    ensuring UI requirements were clear, feasible, and well-documented.-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--        </div>-->
-
-<!--    </div>-->
-<!--    &lt;!&ndash; Right column &ndash;&gt;-->
-<!--    <div class="portfolio-right">-->
-
-<!--        &lt;!&ndash; Main image &ndash;&gt;-->
-<!--        <div class="main-image">-->
-<!--            <img id="mainImage" src="Images/DDE_Poster.png" alt="Main project image">-->
-<!--        </div>-->
-
-
-
-<!--    </div>-->
-
-
-<!--</div>-->
