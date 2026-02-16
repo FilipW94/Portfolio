@@ -26,7 +26,7 @@
 
     <h1 class="header-text">Dino Dynasty Evolved</h1>
     <div class="content-row">
-<!--        PROJECT DETAILS-->
+<!--PROJECT DETAILS-->
         <div class="content-column">
             <div class="box project-info-left">
                 <p class="text preview-header">Details
@@ -53,7 +53,7 @@
                 </div>
                 <br>
                 <p class="text preview-header">Subjects
-<!--                SUBJECTS-->
+<!--SUBJECTS-->
                 <div class="category-image-block">
                     <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
                     <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
@@ -95,11 +95,11 @@
             <div class="box project-info-even">
                 <p class="text preview-header">My time
                 <p class="text preview-content">
-                            Dino Dynasty Evolved is a game i worked on for 8 months between May-December 2025.
+                            Dino Dynasty Evolved is a game I worked on for 8 months between May-December 2025.
                             Which was expected to be about half of the production time.
-                            I was there in a intern capacity, and initially i was meant to work as system/tech designer.
-                            But since i had been thinking of switching to UI/UX design with focus on implementation and
-                            the more technical side, i reached out to our contact person at the company and asked to be
+                            I was there in an intern capacity, and initially I was meant to work as system/tech designer.
+                            But since I had been thinking of switching to UI/UX design with focus on implementation and
+                            the more technical side, I reached out to our contact person at the company and asked to be
                             in charge of UI for the project. To which they agreed.<br><br>
                 <br>
             </div>
@@ -136,17 +136,16 @@
                     <li data-key="layout">Layout and Mock-ups</li>
                     <li data-key="popup">Popup System</li>
                     <li data-key="prompt">Prompt System</li>
-                    <li data-key="log">Acquisition Log</li>
+                    <li data-key="acquisition">Acquisition Log</li>
                     <li data-key="ability">Ability Button visuals</li>
-                    <li data-key="health">Health bar visuals</li>
-                    <li data-key="bugs">Fixing UI bugs</li>
                     <li data-key="navigation">UI Navigation</li>
-                    <li data-key="materials">Making UI materials</li>
-                    <li data-key="animations">UI animations</li>
+                    <li data-key="materials">UI Materials</li>
                     <li data-key="feedback">Controller feedback</li>
                 </ul>
                 
                 <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
+                <br>
+                <p class="text preview-content">(click any image to enlarge)</p>
             </div>
         </div>
 
@@ -162,7 +161,7 @@
             <img src="Images/UIUXDesign.png" alt="UI/UX Design">
         </div>
         <p class="text preview-content">
-            Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout i opted for was:
+            Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout I opted for was:
         </p>
         <ul class="text preview-content list">
             <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (<strong class="strong-text blue">LB</strong>/<strong class="strong-text blue">RB</strong>)</li>
@@ -188,7 +187,7 @@
         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/BTrwFnspFiNObq0IGRnApv/DD-E-GameMenu?node-id=1-32&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A32&embed-host=share" allowfullscreen></iframe>
 
     </div>
-    <!--    POPUP SYSTEM-->
+<!--    POPUP SYSTEM-->
     <div id="popup-content" class="hidden-content">
         <p class="text preview-header">Popup System</p>
         <div class="category-image-block">
@@ -226,7 +225,7 @@
             <img id="Popup Usage" src="Images/PopupUsage.png" alt="Popup Usage" class="clickable-image content-image">
 
     </div>
-    <!--    PROMPT SYSTEM-->
+<!--    PROMPT SYSTEM-->    
     <div id="prompt-content" class="hidden-content">
         <p class="text preview-header">Prompt System</p>
         <div class="category-image-block">
@@ -267,9 +266,137 @@
             <br>
             The prompt system used in the tutorial by another developer.
         </p>
-        <img id="Prompt Tutorial" src="Images/Prompt_Double.png" alt="Prompt Variables" class="clickable-image medium">
-
+        <img id="Prompt Tutorial" src="Images/Prompt_Double.png" alt="Prompt Variables" class="clickable-image content-image">
     </div>
+<!--    Acquisition Log-->
+    <div id="acquisition-content" class="hidden-content">
+        <p class="text preview-header">Acquisition Log</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+        </div>
+        
+        <p class="text preview-content">
+            The game had 3 resources, and we needed to display acquisition in a clear but non-intrusive way.<br><br>
+        </p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/yPLWdHECQPY" title ="Ability Preview" allowfullscreen></iframe>
+        <p class="text preview-content"> 
+        <br>
+            When a resource is acquired it will show the corresponding resource icon with the amount gained. If no new resources is gained 
+            within <strong class="strong-text blue">1.5 seconds</strong> it will fade out. If a new resource is collected it will update the 
+            acquisition log again and reset the duration. All resources always fade-out simultaneously  <br><br>
+            If a resource is collected while the fade out widget animation is playing, it will <strong class="strong-text blue">reverse the fade-out</strong>, 
+            making it look smooth.<br><br>
+            Originally we had the total resources displayed <strong class="strong-text red">center-left</strong> instead of 
+            <strong class="strong-text blue">bottom-left</strong>. During this time I also made an animation where the gained amount shot into the 
+            total amount. But since collecting resources is something the player does frequently, we opted for a <strong class="strong-text blue">less visually stimulating effect</strong>.<br><br> 
+        </p>
+        
+    </div>
+    <div id="ability-content" class="hidden-content">
+        <p class="text preview-header">Ability Button Visuals</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/UIArt.png" alt="UI Art">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <p class="text preview-content"> 
+            The ability button is an indicator for the different characteristics of an ability. This includes key-binding, cooldown, held duration and charges.<br><br>
+            To display all this information I made use of the <strong class="strong-text blue">internal space</strong> for the 
+            <strong class="strong-text blue">cooldown</strong> and <strong class="strong-text blue">held-progress indication</strong>,
+            while showing the <strong class="strong-text red">keybinding</strong> and <strong class="strong-text red">available charges</strong> on the <strong class="strong-text red">outside</strong> of the indicator for abilities that had charges.<br><br>
+        </p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/axqDVDpHzLE " title ="Ability Preview" allowfullscreen></iframe>
+        <p class="text preview-content"> 
+            (Cooldown text and ability name were not meant to be in the final game, <strong class="strong-text red">only for development</strong>)<br><br>
+        </p>
+        
+        <p class="text preview-content"> 
+            Since the ability buttons are placed in an <strong class="strong-text red">arc</strong> in the bottom-left corner, 
+            <strong class="strong-text blue">their rotation had to be manipulated</strong>. This caused the ability icon (white) and keybinding
+            to be rotated as well. this was solved by creating a function in the ability button class that <strong class="strong-text blue">checks its own rotation</strong>, 
+            and then <strong class="strong-text red">subtracts</strong> that from the keybinding and icon.<br>
+        </p>
+        <img id="Keep upright" src="Images/AbilityButton_SetAbilityIconMaterialInst.png" alt="keep upright" class="clickable-image medium">
+        <img id="apply rotation" src="Images/HeldProgressFill.png" alt="apply rotation" class="clickable-image medium">
+        <p class="text preview-content"> 
+            At the time of implementation the amount of max charges an ability could have hadn't been decided yet. So I made it work with up to 
+            <strong class="strong-text red">4 charges</strong> by creating simple textures that are assigned in the child blueprint class. 
+            The ability button then checks how many charges it's corresponding ability has and applies the correct one.<br><br>
+        </p>
+        <img id="Charges C++" src="Images/AbilityButton_Charges.png" alt="Charges C++" class="clickable-image small">
+        <br>
+        <p class="text preview-content">
+            Charges are then displayed by checking CurrentCharges/MaxCharges. At the time my internship we had plans to add new textures for 
+            charges <strong class="strong-text red">but were using the old ones from when our ability button was circular</strong>. That's why 
+            they don't fit very well. <br><br>
+        </p>
+        <img id="2 Charges" src="Images/0Charge.png" alt="2 Charges" class="clickable-image small">
+        <img id="1 Charges" src="Images/1Charge.png" alt="1 Charge" class="clickable-image small">
+        <img id="0 Charges" src="Images/2Charges.png" alt="0 Charges" class="clickable-image small">
+    </div>
+<!--UI Materials-->
+    <div id="materials-content" class="hidden-content">
+        <p class="text preview-header">UI Materials</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/UIArt.png" alt="UI art">
+        </div>
+        <p class="text preview-header">Skill Tree Node Material</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/FFCn_lbUC8w" title ="Skill Tree Material" allowfullscreen></iframe>
+        <p class="text preview-content"> 
+            This material was used for the skill tree nodes. It needed functionality to display several different states like:
+        </p>
+        <ul class="text preview-content list">
+            <li><strong class="strong-text blue">Dormant:</strong> Default state for skill tree node. Available further down the skill tree unless a 
+                mutually exclusive skill is unlocked.<br></li>
+            <li><strong class="strong-text blue">Available:</strong> The player can unlock this if they have the required resources and are inside a friendly nest.</li>
+            <li><strong class="strong-text blue">Unlocked:</strong> The player has already unlocked this skill.</li>
+            <li><strong class="strong-text blue">Locked:</strong> The player has unlocked a mutually exclusive skill.</li>
+        </ul>
+        <br>
+        <img id="EvolutionUnlocked states" src="Images/EvolutionUnlocked_States.png" alt="EvolutionUnlocked states" class="clickable-image content-image">
+        <br>
+        <p class="text preview-header">Ability Button Material</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/_qiMxH5vZ38" title ="Ability indicator" allowfullscreen></iframe>
+        <p class="text preview-content">
+            Used for the ability indicator. Is split up into background and icon with both having gradual color changes. The background is used to indicate cooldown duration
+            and the foreground icon is used to show held progress.<br><br>
+        </p>
+        <p class="text preview-header">Health Bar Material</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/NaeId9ufzaY" title ="Health bar " allowfullscreen></iframe>
+        <p class="text preview-content">
+            Used to display health in an arcing healthbar. Basically just a circular progressbar but the anchor is set to the bottom left corner with the rest hidden.
+        </p>
+    </div>
+    
+    
+<!--Controller Feedback-->
+    <div id="feedback-content" class="hidden-content">
+        <p class="text preview-header">Controller Feedback</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+        </div>
+        <p class="text preview-content">
+            During my time working on DDE I didn't have too much time to work with controller feedback. I did however set it up for a couple of our menu 
+            elements that required the player to hold down a button for a short while. Mainly while unlocking a new tier and abilities<br><br>
+            I had already made states for both these components to make it easier to branch logic.
+            <br><br>
+        </p>
+        <img id="controller feedback" src="Images/ControllerFeedback_Setup.png" alt="controller feedback" class="clickable-image content-image">
+        <p class="text preview-content"> 
+            In the example above the controller feedback is 2 seconds long. Same as the required hold duration. If the player releases the button or it finishes. The feedback ends.
+            <br><br>
+            An added bonus was to also check the <strong class="strong-text blue">current input type</strong>. This would <strong class="strong-text blue">prevent</strong>
+            a plugged-in controller to start vibrating when playing with mouse and keyboard, which can be an <strong class="strong-text red">annoyance</strong>.<br><br>
+        </p>
+    </div>
+    
+    
+    
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
