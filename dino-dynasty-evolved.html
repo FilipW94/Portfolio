@@ -226,13 +226,56 @@
             <img id="Popup Usage" src="Images/PopupUsage.png" alt="Popup Usage" class="clickable-image content-image">
 
     </div>
+    <!--    PROMPT SYSTEM-->
+    <div id="prompt-content" class="hidden-content">
+        <p class="text preview-header">Prompt System</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+        </div>
+        <p class="text preview-content">
+            The prompt system, similar to the Popup system was made to be reusable everywhere. It implemented an interface that 
+            used <strong class="strong-text blue">4 different functions.</strong> (click any image to view enlarged)<br><br>
+        </p>
+            <img id="Prompt Variables" src="Images/PromptVariables.png" alt="Prompt Variables" class="clickable-image small">
+            <img id="UpdateActivePrompt" src="Images/UpdateActivePrompt.png" alt="Prompt Update Active" class="clickable-image small">
+            <img id="ClearSpecific" src="Images/ClearSpecificPrompt.png" alt="Prompt Clear Specific" class="clickable-image small">
+            <img id="ClearAll" src="Images/ClearAllPrompts.png" alt="Prompt Clear All" class="clickable-image small">
+        
+        <ul class="text preview-content list">
+            <li><strong class="strong-text blue">PromptId:</strong> Used to identify prompts and allows for several to exist at once. As well as controlled removal.<br></li>
+            <li><strong class="strong-text blue">VisibleDuration:</strong> Will show the prompt for this amount of time before removing it. Setting this value to
+                0 will leave it up until <strong>ClearSpecificPrompt</strong> or <strong>ClearAllPrompts</strong> is called. Alternatively calling <strong>UpdateActivePrompt</strong> with a new duration.<br></li>
+            <li><strong class="strong-text blue">PromptTitle:</strong> Title for prompt, just a word or two. If this is left empty the text component holding the 
+                title text will be collapsed. Allowing the PromptInfo to use up max amount of space.<br></li>
+            <li><strong class="strong-text blue">PromptInfo</strong> More in-depth description of what information the prompt is meant to relay to the player. 
+                If this field is left empty. The text component holding the info text will be collapsed and the PromptTitle text component will be centered on the prompt window.<br></li>
+        </ul>
+        <br>
+        <img id="Prompt Vectors" src="Images/PromptVectorsExplained.png" alt="Prompt Variables" class="clickable-image content-image">
+        <p class="text preview-content"> </p>
+        <ul class="text preview-content list">
+            <li>
+                <strong class="strong-text blue">CreateNewAsBackup:</strong>
+                This variable in <strong>UpdateActivePrompt</strong> was a minor safety implementation that would just create a new
+                prompt if the one you are looking for is no longer active. Mainly because many different people would use the system and this would make sure the prompt was added
+                no matter what.<br>
+            </li>
+        </ul>
+        <p class="text preview-content"> 
+            <br>
+            The prompt system used in the tutorial by another developer.
+        </p>
+        <img id="Prompt Tutorial" src="Images/Prompt_Double.png" alt="Prompt Variables" class="clickable-image medium">
 
-
+    </div>
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
     </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

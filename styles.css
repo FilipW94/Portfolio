@@ -496,6 +496,7 @@ html, body {
     height: 1500px;
 }
 
+
 .text-row {
     padding-left: 15px;
     margin-top: 3px;
@@ -576,7 +577,13 @@ html, body {
     transition: 0.3s ease;
 }
 .clickable-image.content-image {
-    width: 600px;
+    width: 500px;
+}
+.clickable-image.small {
+    width: 150px;
+}
+.clickable-image.medium {
+    width: 300px;
 }
 .other-image{
     max-width: 600px;
