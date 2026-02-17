@@ -136,6 +136,7 @@
                     <li data-key="layout">Layout and Mock-ups</li>
                     <li data-key="popup">Popup System</li>
                     <li data-key="prompt">Prompt System</li>
+                    <li data-key="icons">Input Icons</li>
                     <li data-key="acquisition">Acquisition Log</li>
                     <li data-key="ability">Ability Button visuals</li>
                     <li data-key="navigation">UI Navigation</li>
@@ -159,7 +160,7 @@
             </p>
             <ul class="text preview-content list">
                 <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (<strong class="strong-text blue">LB</strong>/<strong class="strong-text blue">RB</strong>)</li>
-                <li>Some windows have sub tabs, namely settings and skill tree. These are navigated through using the shoulder triggers. (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
+                <li>Some windows have sub tabs, namely settings and skill tree. These are cycled through using the shoulder triggers. (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
                 <li>Elements within each tab are navigated between using left stick or <strong class="strong-text blue">D-PAD</strong>.</li>
                 <li>Elements are interacted with either by navigating to and then pressing the A button. Or by direct bindings done
                     through the <strong class="strong-text blue">CommonUI plugin</strong>. When using direct bindings the button will respond to the bound input as long as
@@ -194,7 +195,7 @@
         </p>
         <ul class="text preview-content list">
             <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (<strong class="strong-text blue">LB</strong>/<strong class="strong-text blue">RB</strong>)</li>
-            <li>Some windows have sub tabs, namely settings and skill tree. These are navigated through using the shoulder triggers. (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
+            <li>Some windows have sub tabs, namely settings and skill tree. These are cycled through using the shoulder triggers. (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
             <li>Elements within each tab are navigated between using left stick or <strong class="strong-text blue">D-PAD</strong>.</li>
             <li>Elements are interacted with either by navigating to and then pressing the A button. Or by direct bindings done 
                 through the <strong class="strong-text blue">CommonUI plugin</strong>. When using direct bindings the button will respond to the bound input as long as 
@@ -297,7 +298,83 @@
         </p>
         <img id="Prompt Tutorial" src="Images/Prompt_Double.png" alt="Prompt Variables" class="clickable-image content-image">
     </div>
-<!--    Acquisition Log-->
+<!--Input Icons-->
+    <div id="icons-content" class="hidden-content">
+        <p class="text preview-header">Input Icons</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/C++.png" alt="C++">
+            <img src="Images/UIArt.png" alt="UI Art">
+        </div>
+        <p class="text preview-content">
+            Since we used both KBM and Controller, as well as a key-rebinding system. We needed a way to display what input each action was bound to. 
+            For that reason I set up a:
+        </p>
+        <ul class="text preview-content list">
+            <li>Material to show the icons<br></li>
+            <li>Data Table to hold all the keybinding icons<br></li>
+            <li>Functionality to fetch and display the icon<br></li>
+        </ul>
+        <p class="text preview-header">M_IconPicker</p>
+        <p  class="text preview-content"> 
+            The material used to display the icons uses a sprite sheet with the icons for each device.<br>
+        </p>
+        <img id="KBMIcons" src="Images/KBMIconsNumbered.png" alt="KBMIcons" class="clickable-image small">
+        <img id="XboxIcons" src="Images/XboxIconsNumbered.png" alt="XboxIcons" class="clickable-image small">
+        <img id="PlaystationIcons" src="Images/PlaystationIconsNumbered.png" alt="PlaystationIcons" class="clickable-image small">
+        <br>
+        <p  class="text preview-content">
+            The user assigns the grid dimensions for the sprite sheet, the row and column indexes are then used to find the correct icon.<br><br>
+        </p>
+        <img id="M_IconPicker" src="Images/M_IconPicker.png" alt="M_IconPicker" class="clickable-image small">
+        <img id="MI_IconPicker_Xbox" src="Images/MI_IconPicker_Xbox.png" alt="MI_IconPicker_Xbox" class="clickable-image small">
+        <p  class="text preview-content">
+            A material instance was created for each input device.<br>
+        </p>
+        <ul class="text preview-content list">
+            <li>MI_IconPicker_KBM<br></li>
+            <li>MI_IconPicker_Xbox<br></li>
+            <li>MI_IconPicker_Playstation<br></li>
+        </ul>
+        <br>
+        <p class="text preview-header">DT_ButtonIcons</p>
+        <img id="DT_ButtonIcons" src="Images/DT_ButtonIcons.png" alt="DT_ButtonIcons" class="clickable-image small">
+        <p class="text preview-content">
+            The data table uses the row name of the actual input. The row then contains the material instance of the input device, 
+            row index and column index. All things you need to display the icon.
+            <br><br>
+            This setup reduced the need for <strong class="strong-text red">100+</strong> material instances <strong class="strong-text blue">down to 3</strong>, 
+            while also <strong class="strong-text blue">reducing the amount of time</strong> it takes to assign each row since you don't have to locate the asset everytime. 
+            You just copy the row and type the buttons row/column index.
+        </p>
+        <p class="text preview-header">Retrieving Row Data</p>
+        <p class="text preview-content">
+            Now that a collection of all the input icons had been created, I just needed to fetch it. This was done by 
+            having a reference to the <strong class="strong-text blue">input action</strong> tied to an ability, the gameplay 
+            <strong class="strong-text blue">input mapping context</strong> and discerning what <strong class="strong-text blue">input device</strong> is being used. 
+            With this information I could find the input name and use it to fetch the input icon data from the data table.
+        </p>
+        <img id="SetAbilityKeyIcon" src="Images/SetAbilityIcon.png" alt="SetAbilityKeyIcon" class="clickable-image small">
+        <img id="GetGamepadKey" src="Images/GetGamepadKey.png" alt="GetGamepadKey" class="clickable-image small">
+        <img id="SetIconFromDataTable" src="Images/SetKeyIconFromDataTable.png" alt="SetKeyIconFromDataTable" class="clickable-image small">
+        <p class="text preview-content">
+            This logic was then ran when: <br>
+        </p>
+        <ul class="text preview-content list">
+            <li>The game started</li>
+            <li>When an action was re-bound</li>
+            <li>when the event <strong>OnInputMethodChanged</strong> fired (CommonUI plugin event)</li>
+        </ul>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/24UlUyFImkE" title ="Ability Preview" allowfullscreen></iframe>
+        <p class="text preview-content"> 
+        In the video I use xbox controller and re-bind the bite ability from Y to B. Then I also start using my 
+            keyboard and mouse which triggers the <strong>OnInputMethodChanged</strong> event.
+        </p>
+
+    </div>
+<!--Acquisition Log-->
     <div id="acquisition-content" class="hidden-content">
         <p class="text preview-header">Acquisition Log</p>
         <div class="category-image-block">
