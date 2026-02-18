@@ -20,9 +20,9 @@ function changeImage(thumbnail) {
     thumbnail.classList.add("active");
 }
 const bannerImages = [
-    "Images/DDE_Banner.png",
-    "Images/DDE_Banner2.png",
-    "Images/DDE_Banner3.png"
+    "Images/DDE/DDE_Banner.png",
+    "Images/DDE/DDE_Banner2.png",
+    "Images/DDE/DDE_Banner3.png"
 ];
 
 let currentBanner = 0;
