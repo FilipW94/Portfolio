@@ -505,6 +505,11 @@ html, body {
     width: 710px;
     padding: 20px;
 }
+.box.contact {
+    height: 225px;
+    width: 100%;
+    padding: 20px;
+}
 
 .text-row {
     padding-left: 15px;
