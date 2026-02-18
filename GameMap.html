@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Filip Wilhelmsson</title>
+    <title>Game Map</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
+<body>
 
-<!-- Navbar -->
+<!-- Navbar (unchanged) -->
 <div class="navbar">
     <button class="nav-title" onclick="location.href='portfolio.html'">
         Filip Wilhelmsson <span class="nav-role">| Technical & UI/UX Designer</span>
@@ -20,25 +20,16 @@
     </div>
 </div>
 
+<!-- Content -->
+
 <div class="content-window">
 
-<!--DINO DYNASTY EVOLVED-->
-    <div class="portfolio-header">
-        <a href="dino-dynasty-evolved.html" class="portfolio-link">
-            <h2 class="header-text">Dino Dynasty: Evolved</h2>
-        </a>
-    </div>
-    
-    <div class="box banner" id="banner-container">
-        <button class="banner-btn left" onclick="prevBanner()">&#10094;</button>
-        <img id="DDE_Banner" src="Images/DDE/DDE_Banner.png" alt="DDE Banner">
-        <button class="banner-btn right" onclick="nextBanner()">&#10095;</button>
-    </div>
+    <h1 class="header-text">Dino Dynasty Evolved</h1>
     <div class="content-row">
-
+        <!--PROJECT DETAILS-->
         <div class="content-column">
-            <div class="box project-details">
-                <p class="text preview-header">Details
+            <div class="box project-info-left">
+                <p class="text preview-header">Details</p>
                 <p class="text preview-content">
                 <div class="text-row">
                     <span class="label details">Status:</span>
@@ -60,10 +51,9 @@
                     <span class="label details">Developer:</span>
                     <span class="value details">ION Game Design</span>
                 </div>
-                
-            </div>
-            <div class="box project-subjects">
+                <br>
                 <p class="text preview-header">Subjects
+                    <!--SUBJECTS-->
                 <div class="category-image-block">
                     <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
                     <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
@@ -74,70 +64,19 @@
                     <img id="UI Art" class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
 
                 </div>
-            </div>
-        </div>
-        <!-- Column B -->
-        <div class="content-column">
-            <div class="box project-description">
-                <p class="text preview-header">Description
-                <p class="text preview-content">
-                    Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.
-                    Lead your herd through the Cretaceous era as you explore diverse biomes, battle
-                    rival species, and unlock new abilities to survive and dominate.<br><br>
-                <p class="text preview-content">
-                    <a href="https://www.kickstarter.com/projects/455725875/dino-dynasty-evolve?lang=en" target="_blank" class="text-link">
-                        Dino Dynasty Evolved on Kickstarter!
-                    </a>
-                </p>
-            </div>
-            <div class="box button">
-                <div class="box button">
-                    <a href="dino-dynasty-evolved.html" class="view-project">View Project</a>
-                </div>
-            </div> 
-        </div>
 
-        <!-- Column C -->
-        <div class="content-column">
-            <div class="box contribution">
-                <p class="text preview-header">Contribution
-                <ul class="text preview-content list">
-                    <li>Layout and Mock-ups</li>
-                    <li>Popup System</li>
-                    <li>Prompt System</li>
-                    <li>Input Icons</li>
-                    <li>Acquisition Log</li>
-                    <li>Ability Button Visuals</li>
-                    <li>UI Navigation</li>
-                    <li>UI Materials</li>
-                    <li>Controller Feedback</li>
-                </ul>
             </div>
+
         </div>
-
+        <div class="box project-images">
+            <img id="DDE Kickstarter poster" src="Images/DDE/DDE_Kickstarter_Poster.png" alt="DDE Kickstarter Poster" class="clickable-image">
+        </div>
     </div>
-    <br><br><br>
-    
-    
-    
-<!--GAME MAP-->
-    <div class="portfolio-header">
-        <a href="GameMap.html" class="portfolio-link">
-            <h2 class="header-text">Game Map</h2>
-        </a>
-    </div>
-
-    <div class="box banner">
-        <button class="banner-btn left" onclick="prevBanner()">&#10094;</button>
-        <img src="Images/DDE/DDE_Banner.png" alt="DDE Banner">
-        <button class="banner-btn right" onclick="nextBanner()">&#10095;</button>
-    </div>
+    <!--    DESCRIPTION-->
     <div class="content-row">
-
-        <!-- Column A -->
         <div class="content-column">
-            <div class="box gamemap-details">
-                <p class="text preview-header">Details
+            <div class="box gamemap-tribox">
+                <p class="text preview-header">Details</p>
                 <p class="text preview-content">
                 <div class="text-row">
                     <span class="label details">Status:</span>
@@ -155,10 +94,12 @@
                     <span class="label details">Duration:</span>
                     <span class="value details">5 Weeks</span>
                 </div>
-
             </div>
-            <div class="box project-subjects">
+        </div>
+        <div class="content-column">
+            <div class="box gamemap-tribox">
                 <p class="text preview-header">Subjects
+                    <!--SUBJECTS-->
                 <div class="category-image-block">
                     <img class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
                     <img class="category-image" src="Images/TechDesign.png" alt="Tech Design">
@@ -171,41 +112,67 @@
                 </div>
             </div>
         </div>
-        <!-- Column B -->
         <div class="content-column">
-            <div class="box gamemap-description">
+            <div class="box gamemap-tribox">
                 <p class="text preview-header">Description
-                    <p class="text preview-content">
-                        Goal of this project was to create a map that have all the functionality you 
-                        would normally find in modern games.<br><br>
-                    </p>
-            </div>
-            <div class="box button">
-                <div class="box button">
-                    <a href="GameMap.html" class="view-project">View Project</a>
-                </div>
+                <p class="text preview-content">
+                    Goal of this project was to create a map that have all the functionality you would normally find in modern games.
+                </p>
+
             </div>
         </div>
 
-        <div class="content-column">
-            <div class="box gamemap-contribution">
-                <p class="text preview-header">Features</p>
-                <ul class="text preview-content list">
-                    <li>Accurate world representation in terms of distance</li>
-                    <li>Usable with gamepad</li>
-                    <li>Zooming</li>
-                    <li>Panning</li>
-                    <li>Player marker</li>
-                    <li>Placeable waypoint</li>
-                    <li>Points of interests</li>
-                    <li>Information about hovered elements</li>
-                </ul>
-            </div>
-        </div>
 
     </div>
-</div>
+    <!--    CONTRIBUTION LIST-->
+    <div class="content-row">
+        <div class="content-column">
+            <div class="box project-contribution-list">
+                <p class="text preview-header">Features</p>
 
+                <ul class="text preview-content list">
+                    <li data-key="world-rep">Accurate world representation in terms of distance</li>
+                    <li data-key="gamepad">Usable with gamepad</li>
+                    <li data-key="zooming">Zooming</li>
+                    <li data-key="panning">Panning</li>
+                    <li data-key="marker">Player marker</li>
+                    <li data-key="waypoint">Placeable waypoint</li>
+                    <li data-key="poi">Points of interest</li>
+                    <li data-key="hover">Information about hovered elements</li>
+                </ul>
+
+                <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
+                <br>
+                <p class="text preview-content">(click any image to enlarge)</p>
+            </div>
+        </div>
+<!--Default Content View-->
+        <div class="box project-contribution-content" id="contentBox">
+            <p class="text preview-header">Accurate world representation in terms of distance</p>
+            <div class="category-image-block">
+                <img src="Images/TechDesign.png" alt="Tech Design">
+            </div>
+            <p class="text preview-content">
+                Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout I opted for was:
+            </p>
+        </div>
+    </div>
+<!--World Representation-->
+    <div id="layout-content" class="hidden-content">
+        <p class="world-rep">Accurate world representation in terms of distance</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+        </div>
+        <p class="text preview-content">
+            Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout I opted for was:
+        </p>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>

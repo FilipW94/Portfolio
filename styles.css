@@ -436,28 +436,24 @@ html, body {
 }
 .box.project-details {
     border-top: 0;
-    height: 250px;
+    height: 225px;
 }
 .box.project-subjects {
     border-top: 0;
     height: 150px;
 }
-
 .box.project-description {
-    height: 300px;
+    height: 275px;
     border-top: 0;
     border-right: 0;
     border-left: 0;
 }
 .box.button {
     height: 100px;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
 }
 
 .box.contribution {
-    height: 400px;
+    height: 375px;
     border-top: 0;
 }
 .box.button {
@@ -509,6 +505,23 @@ html, body {
     height: 225px;
     width: 100%;
     padding: 20px;
+}
+.box.gamemap-description {
+    border-bottom: 2px solid #81AAFF;
+    height: 210px;
+}
+.box.gamemap-details {
+    height: 160px;
+}
+.box.gamemap-subjects {
+    height: 75px;
+}
+.box.gamemap-contribution {
+    height: 310px;
+}
+.box.gamemap-tribox {
+    width: 337px;
+    height: 200px;
 }
 
 .text-row {
@@ -581,8 +594,6 @@ html, body {
 .strong-text.red {
     color: indianred;
 }
-
-
 
 /* Normal image hover effect */
 .clickable-image {
