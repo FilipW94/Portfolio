@@ -13,22 +13,31 @@
         Filip Wilhelmsson <span class="nav-role">| Technical & UI/UX Designer</span>
     </button>
     <div class="nav-right">
-        <button class="nav-button" onclick="location.href='portfolio.html'">Portfolio</button>
+        <button class="nav-button-selected" onclick="location.href='portfolio.html'">Portfolio</button>
         <button class="nav-button" onclick="location.href='resume.html'">Resume</button>
         <button class="nav-button" onclick="location.href='contact.html'">Contact</button>
         <button class="nav-button" onclick="location.href='about.html'">About me</button>
     </div>
 </div>
 
-<!-- Content -->
-
 <div class="content-window">
 
-    <h1 class="header-text">Dino Dynasty Evolved</h1>
+    <!--DINO DYNASTY EVOLVED-->
+    <div class="portfolio-header">
+        <a href="dino-dynasty-evolved.html" class="portfolio-link">
+            <h2 class="header-text">Dino Dynasty: Evolved</h2>
+        </a>
+    </div>
+
+    <div class="box banner" id="banner-container">
+        <button class="banner-btn left" onclick="prevBanner()">&#10094;</button>
+        <img id="DDE_Banner" src="Images/DDE/DDE_Banner.png" alt="DDE Banner">
+        <button class="banner-btn right" onclick="nextBanner()">&#10095;</button>
+    </div>
     <div class="content-row">
-        <!--PROJECT DETAILS-->
+
         <div class="content-column">
-            <div class="box project-info-left">
+            <div class="box project-details">
                 <p class="text preview-header">Details
                 <p class="text preview-content">
                 <div class="text-row">
@@ -51,9 +60,10 @@
                     <span class="label details">Developer:</span>
                     <span class="value details">ION Game Design</span>
                 </div>
-                <br>
+
+            </div>
+            <div class="box project-subjects">
                 <p class="text preview-header">Subjects
-                    <!--SUBJECTS-->
                 <div class="category-image-block">
                     <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
                     <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
@@ -64,495 +74,135 @@
                     <img id="UI Art" class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
 
                 </div>
-
             </div>
-
         </div>
-        <div class="box project-images">
-            <img id="DDE Kickstarter poster" src="Images/DDE/DDE_Kickstarter_Poster.png" alt="DDE Kickstarter Poster" class="clickable-image">
-        </div>
-    </div>
-    <!--    DESCRIPTION-->
-    <div class="content-row">
+        <!-- Column B -->
         <div class="content-column">
-            <div class="box project-info-even">
-                <p class="text preview-header">Description</p>
+            <div class="box project-description">
+                <p class="text preview-header">Description
                 <p class="text preview-content">
                     Dino Dynasty Evolved is a cinematic third-person action-adventure set in a prehistoric world.
                     Lead your herd through the Cretaceous era as you explore diverse biomes, battle
                     rival species, and unlock new abilities to survive and dominate.<br><br>
-                </p>
-
-                <p class="text preview-content bold">
+                <p class="text preview-content">
                     <a href="https://www.kickstarter.com/projects/455725875/dino-dynasty-evolve?lang=en" target="_blank" class="text-link">
-                        Check out Dino Dynasty Evolved on Kickstarter!
+                        Dino Dynasty Evolved on Kickstarter!
                     </a>
                 </p>
-
             </div>
-        </div>
-        <!--        MY TIME-->
-        <div class="content-column">
-            <div class="box project-info-even">
-                <p class="text preview-header">My time</p>
-                <p class="text preview-content">
-                    Dino Dynasty Evolved is a game I worked on for 8 months between May-December 2025.
-                    Which was expected to be about half of the production time.
-                    I was there in an intern capacity, and initially I was meant to work as system/tech designer.
-                    But since I had been thinking of switching to UI/UX design with focus on implementation and
-                    the more technical side, I reached out to our contact person at the company and asked to be
-                    in charge of UI for the project. To which they agreed.<br><br>
-                    <br>
+            <div class="box button">
+                <div class="box button">
+                    <a href="dino-dynasty-evolved.html" class="view-project">View Project</a>
+                </div>
             </div>
         </div>
 
-    </div>
-    <!--    INTER-PROJECT COLLABORATION-->
-    <div class="content-row">
-        <div class="box banner">
-            <p class="text preview-header">Inter-project collaboration</p>
-
-            <p class="text preview-content">
-                During my time at ION I worked very closely with several other departments to accomplish
-                my tasks, including:
-            </p>
-
-            <ul class="text preview-content list">
-                <li>Other members of the design discipline with different specializations.</li>
-                <li>The 2D artist in charge of making the UI art, who was also the project’s art lead.</li>
-                <li>
-                    Programmers, who I either supplied with UI specifications or collaborated with directly
-                    during prototyping and implementation.
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--CONTRIBUTION LIST-->
-    <div class="content-row">
+        <!-- Column C -->
         <div class="content-column">
-            <div class="box project-contribution-list">
-                <p class="text preview-header">My Contribution</p>
-
+            <div class="box contribution">
+                <p class="text preview-header">Contribution
                 <ul class="text preview-content list">
-                    <li data-key="layout">Layout and Mock-ups</li>
-                    <li data-key="popup">Popup System</li>
-                    <li data-key="prompt">Prompt System</li>
-                    <li data-key="icons">Input Icons</li>
-                    <li data-key="acquisition">Acquisition Log</li>
-                    <li data-key="ability">Ability Button visuals</li>
-                    <li data-key="navigation">UI Navigation</li>
-                    <li data-key="materials">UI Materials</li>
-                    <li data-key="feedback">Controller feedback</li>
+                    <li>Layout and Mock-ups</li>
+                    <li>Popup System</li>
+                    <li>Prompt System</li>
+                    <li>Input Icons</li>
+                    <li>Acquisition Log</li>
+                    <li>Ability Button Visuals</li>
+                    <li>UI Navigation</li>
+                    <li>UI Materials</li>
+                    <li>Controller Feedback</li>
                 </ul>
-
-                <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
-                <br>
-                <p class="text preview-content">(click any image to enlarge)</p>
             </div>
         </div>
-        <!--Default Content View-->
-        <div class="box project-contribution-content" id="contentBox">
-            <p class="text preview-header">Layout and Mock-ups</p>
-            <div class="category-image-block">
-                <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+
+    </div>
+    <br><br><br>
+
+
+
+    <!--GAME MAP-->
+    <div class="portfolio-header">
+        <a href="GameMap.html" class="portfolio-link">
+            <h2 class="header-text">Game Map</h2>
+        </a>
+    </div>
+
+    <div class="box banner">
+        <button class="banner-btn left" onclick="prevBanner()">&#10094;</button>
+        <img src="Images/DDE/DDE_Banner.png" alt="DDE Banner">
+        <button class="banner-btn right" onclick="nextBanner()">&#10095;</button>
+    </div>
+    <div class="content-row">
+
+        <!-- Column A -->
+        <div class="content-column">
+            <div class="box gamemap-details">
+                <p class="text preview-header">Details
+                <p class="text preview-content">
+                <div class="text-row">
+                    <span class="label details">Status:</span>
+                    <span class="value details">In Development</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Engine:</span>
+                    <span class="value details">Unreal Engine 5</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Role:</span>
+                    <span class="value details">Solo Project</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Duration:</span>
+                    <span class="value details">5 Weeks</span>
+                </div>
+
             </div>
-            <p class="text preview-content">
-                Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout I opted for was:
-            </p>
-            <ul class="text preview-content list">
-                <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons.
-                    (<strong class="strong-text blue">LB</strong>/<strong class="strong-text blue">RB</strong>)</li>
-                <li>Some windows have sub tabs, namely settings and skill tree. These are cycled through using the shoulder triggers.
-                    (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
-                <li>Elements within each tab are navigated between using left stick or <strong class="strong-text blue">D-PAD</strong>.</li>
-                <li>Elements are interacted with either by navigating to and then pressing the A button. Or by direct bindings done
-                    through the <strong class="strong-text blue">CommonUI plugin</strong>. When using direct bindings the button will
-                    respond to the bound input as long as the parent widget is focused and activated.</li>
-            </ul>
-            <br>
-            <p class="text preview-header">Figma</p>
-            <p class="text preview-content">
-                Some of the pages have <strong class="strong-text blue">alternate versions</strong>. These are layouts that were either planned
-                while working at ION but not yet implemented, or improvements I've thought of since.<br><br>
-            </p>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/uiyeZSYzIKjwv4mn08ja0h/DD-E-Layout?node-id=1-2&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe> <br>
-            <p class="text preview-content">
-                The Figma layout here is representative of how the in-game UI looked when my internship ended. Unfortunately there were still some sections
-                I didn't have time to improve upon. <br><br>
-                Some of the pages have <strong class="strong-text blue">Alternate versions</strong> that show what they were planned to look like while working there, or improvements
-                I've come up with since my internship ended.
-                <br><br>
-                Below you can view the state of the <strong class="strong-text blue">in-game UI</strong> when my internship ended.
-            </p>
-            <br>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/BTrwFnspFiNObq0IGRnApv/DD-E-GameMenu?node-id=1-32&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A32&embed-host=share" allowfullscreen></iframe>
+            <div class="box project-subjects">
+                <p class="text preview-header">Subjects
+                <div class="category-image-block">
+                    <img class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
+                    <img class="category-image" src="Images/TechDesign.png" alt="Tech Design">
+                </div>
+                <div class="category-image-block">
+                    <img class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+                    <img class="category-image" src="Images/C++.png" alt="C++">
+                    <img class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
 
+                </div>
+            </div>
         </div>
-    </div>
-    <!--    CONTRIBUTION CONTENT-->
-    <!--    LAYOUT AND MOCKUPS-->
-    <div id="layout-content" class="hidden-content">
-        <p class="text preview-header">Layout and Mock-ups</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-        </div>
-        <p class="text preview-content">
-            Because Dino Dynasty Evolved was meant to be played with a controller, the general game menu layout I opted for was:
-        </p>
-        <ul class="text preview-content list">
-            <li>Menu buttons at the top of the screen which are cycled through using controller shoulder buttons. (<strong class="strong-text blue">LB</strong>/<strong class="strong-text blue">RB</strong>)</li>
-            <li>Some windows have sub tabs, namely settings and skill tree. These are cycled through using the shoulder triggers. (<strong class="strong-text blue">LT</strong>/<strong class="strong-text blue">RT</strong>)</li>
-            <li>Elements within each tab are navigated between using left stick or <strong class="strong-text blue">D-PAD</strong>.</li>
-            <li>Elements are interacted with either by navigating to and then pressing the A button. Or by direct bindings done
-                through the <strong class="strong-text blue">CommonUI plugin</strong>. When using direct bindings the button will respond to the bound input as long as
-                the parent widget is focused and activated.</li>
-        </ul>
-        <br>
-        <p class="text preview-header">Figma</p>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/uiyeZSYzIKjwv4mn08ja0h/DD-E-Layout?node-id=68-2771&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
-        <br>
-        <p class="text preview-content">
-            The Figma layout here is representative of how the in-game UI looked when my internship ended. Unfortunately there were still some sections
-            I didn't have time to improve upon. <br><br>
-            Some of the pages have <strong class="strong-text blue">Alternate versions</strong> that show what they were planned to look like while working there, or improvements
-            I've come up with since my internship ended.
-            <br><br>
-            Below you can view the state of the <strong class="strong-text blue">in-game UI</strong> when my internship ended.
-        </p>
-        <br>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="375" src="https://embed.figma.com/proto/BTrwFnspFiNObq0IGRnApv/DD-E-GameMenu?node-id=1-32&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A32&embed-host=share" allowfullscreen></iframe>
-
-    </div>
-    <!--    POPUP SYSTEM-->
-    <div id="popup-content" class="hidden-content">
-        <p class="text preview-header">Popup System</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
-            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
-        </div>
-        <br>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/Cu24wYwmL-Q" title ="Ability Preview" allowfullscreen></iframe>
-        <br><br>
-        <p class="text preview-content">
-            The Popup system was made to be reusable everywhere and has 2 available buttons.
-            The default button that is always visible is <strong class="strong-text blue">Confirm</strong>. The second optional button
-            is a <strong class="strong-text red">Cancel</strong> button. The popup widget also has an <strong>OnPopupReply</strong> event that returns a
-            boolean. This can be used to run different logic depending on the return value.
-            <br><br>
-            General uses for the Popup is to display information that you need to make sure the player doesn't miss,
-            hence why its removal is dependent on input.
-            A specific example of when both the <strong class="strong-text blue">Confirm</strong> and <strong class="strong-text red">Cancel</strong> button
-            is used is when the player is assigning keybindings via the control settings. If they try to bind a button that already has an active binding,
-            the <strong class="strong-text blue">Confirm</strong> button will swap the input bindings and save, while <strong class="strong-text red">Cancel</strong>
-            will prevent the action. Both inputs then close the popup.
-            <br><br>
-            The Popup widget can also display an <strong class="strong-text blue">Image</strong> or <strong class="strong-text blue">Video</strong>.
-            This can further clarify new mechanics or systems that simple text might struggle to convey. In DDE we opted to use short ability previews
-            on the popup whenever a player unlocked a new base ability. As well as making them viewable from their corresponding skill tree
-            by pressing <strong class="strong-text blue">Y</strong>. This helped the player grasp the ability quicker than just reading.
-            <br><br>
-            Below you have a typical setup when using the <strong class="strong-text blue">popup system</strong>. You create the widget and
-            call an <strong class="strong-text blue">interface function</strong> on the <strong class="strong-text blue">HUD</strong> class attached
-            to the <strong class="strong-text blue">player controller</strong>. This will safely open the widget above any other UI elements and set
-            focus on the widget.
-            <br><br>
-        </p>
-        <img id="Popup Usage" src="Images/DDE/PopupUsage.png" alt="Popup Usage" class="clickable-image content-image">
-
-    </div>
-    <!--    PROMPT SYSTEM-->
-    <div id="prompt-content" class="hidden-content">
-        <p class="text preview-header">Prompt System</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
-            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
-        </div>
-        <p class="text preview-content">
-            The prompt system, similar to the Popup system was made to be reusable everywhere. It implemented an interface that
-            used <strong class="strong-text blue">4 different functions.</strong><br><br>
-        </p>
-        <img id="Prompt Variables" src="Images/DDE/PromptVariables.png" alt="Prompt Variables" class="clickable-image small">
-        <img id="UpdateActivePrompt" src="Images/DDE/UpdateActivePrompt.png" alt="Prompt Update Active" class="clickable-image small">
-        <img id="ClearSpecific" src="Images/DDE/ClearSpecificPrompt.png" alt="Prompt Clear Specific" class="clickable-image small">
-        <img id="ClearAll" src="Images/DDE/ClearAllPrompts.png" alt="Prompt Clear All" class="clickable-image small">
-
-        <ul class="text preview-content list">
-            <li><strong class="strong-text blue">PromptId:</strong> Used to identify prompts and allows for several to exist at once. As well as controlled removal.<br></li>
-            <li><strong class="strong-text blue">VisibleDuration:</strong> Will show the prompt for this amount of time before removing it. Setting this value to
-                0 will leave it up until <strong>ClearSpecificPrompt</strong> or <strong>ClearAllPrompts</strong> is called. Alternatively calling <strong>UpdateActivePrompt</strong> with a new duration.<br></li>
-            <li><strong class="strong-text blue">PromptTitle:</strong> Title for prompt, just a word or two. If this is left empty the text component holding the
-                title text will be collapsed. Allowing the PromptInfo to use up max amount of space.<br></li>
-            <li><strong class="strong-text blue">PromptInfo</strong> More in-depth description of what information the prompt is meant to relay to the player.
-                If this field is left empty. The text component holding the info text will be collapsed and the PromptTitle text component will be centered on the prompt window.<br></li>
-        </ul>
-        <br>
-        <img id="Prompt Vectors" src="Images/DDE/PromptVectorsExplained.png" alt="Prompt Variables" class="clickable-image content-image">
-        <p class="text preview-content"> </p>
-        <ul class="text preview-content list">
-            <li>
-                <strong class="strong-text blue">CreateNewAsBackup:</strong>
-                This variable in <strong>UpdateActivePrompt</strong> was a minor safety implementation that would just create a new
-                prompt if the one you are looking for is no longer active. Mainly because many different people would use the system and this would make sure the prompt was added
-                no matter what.<br>
-            </li>
-        </ul>
-        <p class="text preview-content">
-            <br>
-            The prompt system used in the tutorial by another developer.
-        </p>
-        <img id="Prompt Tutorial" src="Images/DDE/Prompt_Double.png" alt="Prompt Variables" class="clickable-image content-image">
-    </div>
-    <!--Input Icons-->
-    <div id="icons-content" class="hidden-content">
-        <p class="text preview-header">Input Icons</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
-            <img src="Images/C++.png" alt="C++">
-            <img src="Images/UIArt.png" alt="UI Art">
-        </div>
-        <p class="text preview-content">
-            Since we used both KBM and Controller, as well as a key-rebinding system. We needed a way to display what input each action was bound to.
-            For that reason I set up a:
-        </p>
-        <ul class="text preview-content list">
-            <li>Material to show the icons<br></li>
-            <li>Data Table to hold all the keybinding icons<br></li>
-            <li>Functionality to fetch and display the icon<br></li>
-        </ul>
-        <p class="text preview-header">M_IconPicker</p>
-        <p  class="text preview-content">
-            The material used to display the icons uses a sprite sheet with the icons for each device.<br>
-        </p>
-        <img id="KBMIcons" src="Images/DDE/KBMIconsNumbered.png" alt="KBMIcons" class="clickable-image small">
-        <img id="XboxIcons" src="Images/DDE/XboxIconsNumbered.png" alt="XboxIcons" class="clickable-image small">
-        <img id="PlaystationIcons" src="Images/DDE/PlaystationIconsNumbered.png" alt="PlaystationIcons" class="clickable-image small">
-        <br>
-        <p  class="text preview-content">
-            The user assigns the grid dimensions for the sprite sheet, the row and column indexes are then used to find the correct icon.<br><br>
-        </p>
-        <img id="M_IconPicker" src="Images/DDE/M_IconPicker.png" alt="M_IconPicker" class="clickable-image small">
-        <img id="MI_IconPicker_Xbox" src="Images/DDE/MI_IconPicker_Xbox.png" alt="MI_IconPicker_Xbox" class="clickable-image small">
-        <p  class="text preview-content">
-            A material instance was created for each input device.<br>
-        </p>
-        <ul class="text preview-content list">
-            <li>MI_IconPicker_KBM<br></li>
-            <li>MI_IconPicker_Xbox<br></li>
-            <li>MI_IconPicker_Playstation<br></li>
-        </ul>
-        <br>
-        <p class="text preview-header">DT_ButtonIcons</p>
-        <img id="DT_ButtonIcons" src="Images/DDE/DT_ButtonIcons.png" alt="DT_ButtonIcons" class="clickable-image small">
-        <p class="text preview-content">
-            The data table uses the row name of the actual input. The row then contains the material instance of the input device,
-            row index and column index. All things you need to display the icon.
-            <br><br>
-            This setup reduced the need for <strong class="strong-text red">100+</strong> material instances <strong class="strong-text blue">down to 3</strong>,
-            while also <strong class="strong-text blue">reducing the amount of time</strong> it takes to assign each row since you don't have to locate the asset everytime.
-            You just copy the row and type the buttons row/column index.
-        </p>
-        <p class="text preview-header">Retrieving Row Data</p>
-        <p class="text preview-content">
-            Now that a collection of all the input icons had been created, I just needed to fetch it. This was done by
-            having a reference to the <strong class="strong-text blue">input action</strong> tied to an ability, the gameplay
-            <strong class="strong-text blue">input mapping context</strong> and discerning what <strong class="strong-text blue">input device</strong> is being used.
-            With this information I could find the input name and use it to fetch the input icon data from the data table.
-        </p>
-        <img id="SetAbilityKeyIcon" src="Images/DDE/SetAbilityIcon.png" alt="SetAbilityKeyIcon" class="clickable-image small">
-        <img id="GetGamepadKey" src="Images/DDE/GetGamepadKey.png" alt="GetGamepadKey" class="clickable-image small">
-        <img id="SetIconFromDataTable" src="Images/DDE/SetKeyIconFromDataTable.png" alt="SetKeyIconFromDataTable" class="clickable-image small">
-        <p class="text preview-content">
-            This logic was then ran when: <br>
-        </p>
-        <ul class="text preview-content list">
-            <li>The game started</li>
-            <li>When an action was re-bound</li>
-            <li>when the event <strong>OnInputMethodChanged</strong> fired (CommonUI plugin event)</li>
-        </ul>
-        <br>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/24UlUyFImkE" title ="Ability Preview" allowfullscreen></iframe>
-        <p class="text preview-content">
-            In the video I use xbox controller and re-bind the bite ability from Y to B. Then I also start using my
-            keyboard and mouse which triggers the <strong>OnInputMethodChanged</strong> event.
-        </p>
-
-    </div>
-    <!--Acquisition Log-->
-    <div id="acquisition-content" class="hidden-content">
-        <p class="text preview-header">Acquisition Log</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
+        <!-- Column B -->
+        <div class="content-column">
+            <div class="box gamemap-description">
+                <p class="text preview-header">Description
+                <p class="text preview-content">
+                    Goal of this project was to create a map that have all the functionality you
+                    would normally find in modern games.<br><br>
+                </p>
+            </div>
+            <div class="box button">
+                <div class="box button">
+                    <a href="GameMap.html" class="view-project">View Project</a>
+                </div>
+            </div>
         </div>
 
-        <p class="text preview-content">
-            The game had 3 resources, and we needed to display acquisition in a clear but non-intrusive way.<br><br>
-        </p>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/yPLWdHECQPY" title ="Ability Preview" allowfullscreen></iframe>
-        <p class="text preview-content">
-            <br>
-            When a resource is acquired it will show the corresponding resource icon with the amount gained. If no new resources is gained
-            within <strong class="strong-text blue">1.5 seconds</strong> it will fade out. If a new resource is collected it will update the
-            acquisition log again and reset the duration. All resources always fade-out simultaneously  <br><br>
-            If a resource is collected while the fade out widget animation is playing, it will <strong class="strong-text blue">reverse the fade-out</strong>,
-            making it look smooth.<br><br>
-            Originally we had the total resources displayed <strong class="strong-text red">center-left</strong> instead of
-            <strong class="strong-text blue">bottom-left</strong>. During this time I also made an animation where the gained amount shot into the
-            total amount. But since collecting resources is something the player does frequently, we opted for a <strong class="strong-text blue">less visually stimulating effect</strong>.<br><br>
-        </p>
-    </div>
-    <!--Ability Button Visuals-->
-    <div id="ability-content" class="hidden-content">
-        <p class="text preview-header">Ability Button Visuals</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
-            <img src="Images/UIArt.png" alt="UI Art">
-            <img src="Images/C++.png" alt="C++">
+        <div class="content-column">
+            <div class="box gamemap-contribution">
+                <p class="text preview-header">Features</p>
+                <ul class="text preview-content list">
+                    <li>Accurate world representation in terms of distance</li>
+                    <li>Usable with gamepad</li>
+                    <li>Zooming</li>
+                    <li>Panning</li>
+                    <li>Player marker</li>
+                    <li>Placeable waypoint</li>
+                    <li>Points of interests</li>
+                    <li>Information about hovered elements</li>
+                </ul>
+            </div>
         </div>
-        <p class="text preview-content">
-            The ability button is an indicator for the different characteristics of an ability. This includes key-binding, cooldown, held duration and charges.<br><br>
-            To display all this information I made use of the <strong class="strong-text blue">internal space</strong> for the
-            <strong class="strong-text blue">cooldown</strong> and <strong class="strong-text blue">held-progress indication</strong>,
-            while showing the <strong class="strong-text red">keybinding</strong> and <strong class="strong-text red">available charges</strong> on the <strong class="strong-text red">outside</strong> of the indicator for abilities that had charges.<br><br>
-        </p>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/axqDVDpHzLE" title ="Ability Preview" allowfullscreen></iframe>
-        <p class="text preview-content">
-            (Cooldown text and ability name were not meant to be in the final game, <strong class="strong-text red">only for development</strong>)<br><br>
-        </p>
 
-        <p class="text preview-content">
-            Since the ability buttons are placed in an <strong class="strong-text red">arc</strong> in the bottom-left corner,
-            <strong class="strong-text blue">their rotation had to be manipulated</strong>. This caused the ability icon (white) and keybinding
-            to be rotated as well. this was solved by creating a function in the ability button class that <strong class="strong-text blue">checks its own rotation</strong>,
-            and then <strong class="strong-text red">subtracts</strong> that from the keybinding and icon.<br>
-        </p>
-        <img id="Keep upright" src="Images/DDE/AbilityButton_SetAbilityIconMaterialInst.png" alt="keep upright" class="clickable-image medium">
-        <img id="apply rotation" src="Images/DDE/HeldProgressFill.png" alt="apply rotation" class="clickable-image medium">
-        <p class="text preview-content">
-            At the time of implementation the amount of max charges an ability could have hadn't been decided yet. So I made it work with up to
-            <strong class="strong-text red">4 charges</strong> by creating simple textures that are assigned in the child blueprint class.
-            The ability button then checks how many charges it's corresponding ability has and applies the correct one.<br><br>
-        </p>
-        <img id="Charges C++" src="Images/DDE/AbilityButton_Charges.png" alt="Charges C++" class="clickable-image small">
-        <br>
-        <p class="text preview-content">
-            Charges are then displayed by checking CurrentCharges/MaxCharges. At the time my internship we had plans to add new textures for
-            charges <strong class="strong-text red">but were using the old ones from when our ability button was circular</strong>. That's why
-            they don't fit very well. <br><br>
-        </p>
-        <img id="2 Charges" src="Images/DDE/0Charge.png" alt="2 Charges" class="clickable-image small">
-        <img id="1 Charges" src="Images/DDE/1Charge.png" alt="1 Charge" class="clickable-image small">
-        <img id="0 Charges" src="Images/DDE/2Charges.png" alt="0 Charges" class="clickable-image small">
-    </div>
-    <!--    UI Navigation-->
-    <div id="navigation-content" class="hidden-content">
-        <p class="text preview-header">UI Navigation</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
-        </div>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/SPethKcQBdo" title ="Ability Preview" allowfullscreen></iframe>
-        <p class="text preview-content">
-            For The general horizontal tab layout I used the <strong class="strong-text blue">CommonUI Tablist class</strong>. It has functionality
-            that makes the input bindings easy to set up and also <strong class="strong-text blue">keeps it separate</strong> from the other gameplay inputs.
-        </p>
-        <img id="Tablist 1" src="Images/DDE/Tablist_Setup.png" alt="Tablist 1" class="clickable-image small">
-        <img id="Tablist 2" src="Images/DDE/Tablist_Setup2.png" alt="Tablist 2" class="clickable-image small">
-        <br>
-        <p class="text preview-content">
-            Our settings menus use a <strong class="strong-text blue">settings slider class</strong> placed inside either a vertical box or a scroll box.
-            A <strong class="strong-text red">problem</strong> here was that we wanted to use <strong class="strong-text blue">vertical analog inputs</strong>
-            for <strong class="strong-text blue">navigation</strong>, but <strong class="strong-text red">horizontal analog inputs</strong> to
-            <strong class="strong-text red">change the settings option</strong>. For this reason I didn't use the default navigation system and instead set up some custom logic.
-            <br><br>
-            The <strong class="strong-text blue">parent widget</strong> holding all the sliders consume the <strong class="strong-text blue">vertical</strong>
-            analog inputs and move between the different slider.
-        </p>
-        <img id="settings menu nav" src="Images/DDE/SettingsParent_AnalogMovement_Vertical.png" alt="settings menu nav" class="clickable-image medium">
-        <p class="text preview-content">
-            The <strong class="strong-text blue">settings sliders</strong> themselves consume the <strong class="strong-text blue">horizontal analog inputs</strong>
-            and change the current settings option.
-        </p>
-        <img id="settings slider nav" src="Images/DDE/SettingsSlider_AnalogMovement_Horizontal.png" alt="settings slider nav" class="clickable-image medium">
-        <p class="text preview-content">
-            One of the <strong class="strong-text red">trickier parts</strong> of the navigation was the skill tree. Since we had a
-            <strong class="strong-text red">large amounts of skills</strong>, a simple vertical/horizontal layout didn't work. Both
-            because the sheer amount <strong class="strong-text red">wouldn't fit</strong> in the large skill trees, but also
-            because of the connections between them. To set this up I used the <strong class="strong-text blue">default navigation</strong>
-            which uses vertical/horizontal movement and tested moving between all the nodes to find what felt good or not.
-        </p>
-        <img id="skill tree default nav 1" src="Images/DDE/SkillTree_10Navi.png" alt="skill tree default nav 1" class="clickable-image small">
-        <img id="skill tree default nav 2" src="Images/DDE/SkillTree_21Nav.png" alt="skill tree default nav 2" class="clickable-image small">
-        <img id="skill tree default nav 3" src="Images/DDE/SkillTree_32ANav.png" alt="skill tree default nav 3" class="clickable-image small">
-
-    </div>
-    <!--UI Materials-->
-    <div id="materials-content" class="hidden-content">
-        <p class="text preview-header">UI Materials</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/UIArt.png" alt="UI art">
-        </div>
-        <p class="text preview-header">Skill Tree Node Material</p>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/FFCn_lbUC8w" title ="Skill Tree Material" allowfullscreen></iframe>
-        <p class="text preview-content">
-            This material was used for the skill tree nodes. It needed functionality to display several different states like:
-        </p>
-        <ul class="text preview-content list">
-            <li><strong class="strong-text blue">Dormant:</strong> Default state for skill tree node. Available further down the skill tree unless a
-                mutually exclusive skill is unlocked.<br></li>
-            <li><strong class="strong-text blue">Available:</strong> The player can unlock this if they have the required resources and are inside a friendly nest.</li>
-            <li><strong class="strong-text blue">Unlocked:</strong> The player has already unlocked this skill.</li>
-            <li><strong class="strong-text blue">Locked:</strong> The player has unlocked a mutually exclusive skill.</li>
-        </ul>
-        <br>
-        <img id="EvolutionUnlocked states" src="Images/DDE/EvolutionUnlocked_States.png" alt="EvolutionUnlocked states" class="clickable-image content-image">
-        <br>
-        <p class="text preview-header">Ability Button Material</p>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/_qiMxH5vZ38" title ="Ability indicator" allowfullscreen></iframe>
-        <p class="text preview-content">
-            Used for the ability indicator. Is split up into background and icon with both having gradual color changes. The background is used to indicate cooldown duration
-            and the foreground icon is used to show held progress.<br><br>
-        </p>
-        <p class="text preview-header">Health Bar Material</p>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/NaeId9ufzaY" title ="Health bar " allowfullscreen></iframe>
-        <p class="text preview-content">
-            Used to display health in an arcing health bar. Basically just a circular progressbar but the anchor is set to the bottom left corner with the rest hidden.
-        </p>
-    </div>
-
-    <!--Controller Feedback-->
-    <div id="feedback-content" class="hidden-content">
-        <p class="text preview-header">Controller Feedback</p>
-        <div class="category-image-block">
-            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
-            <img src="Images/TechDesign.png" alt="Tech Design">
-            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
-        </div>
-        <p class="text preview-content">
-            During my time working on DDE I didn't have too much time to work with controller feedback. I did however set it up for a couple of our menu
-            elements that required the player to hold down a button for a short while. Mainly while unlocking a new tier and abilities<br><br>
-            I had already made states for both these components to make it easier to branch logic.
-            <br><br>
-        </p>
-        <img id="controller feedback" src="Images/DDE/ControllerFeedback_Setup.png" alt="controller feedback" class="clickable-image content-image">
-        <p class="text preview-content">
-            In the example above the controller feedback is 2 seconds long. Same as the required hold duration. If the player releases the button or it finishes. The feedback ends.
-            <br><br>
-            An added bonus was to also check the <strong class="strong-text blue">current input type</strong>. This would <strong class="strong-text blue">prevent</strong>
-            a plugged-in controller to start vibrating when playing with mouse and keyboard, which can be an <strong class="strong-text red">annoyance</strong>.<br><br>
-        </p>
-    </div>
-
-
-
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
     </div>
 </div>
 
