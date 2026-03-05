@@ -484,8 +484,13 @@ html, body {
     border-top: 0;
     border-bottom: 0;
 }
+.box.project-info-even-small {
+    width: 505px;
+    height: 250px;
+}
 .box.project-contribution-list {
-    height: 500px;
+    height: 100%;
+    padding-bottom: 25px;
 }
 .box.project-contribution-content {
     width: 710px;
