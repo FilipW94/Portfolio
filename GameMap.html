@@ -33,7 +33,7 @@
                 <p class="text preview-content">
                 <div class="text-row">
                     <span class="label details">Status:</span>
-                    <span class="value details">In Development</span>
+                    <span class="value details">Finished (for now)</span>
                 </div>
                 <div class="text-row">
                     <span class="label details">Engine:</span>
@@ -53,10 +53,11 @@
                 <div class="category-image-block">
                     <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
                     <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
+                    <img id="C++" class="category-image" src="Images/C++.png" alt="C++">
                 </div>
                 <div class="category-image-block">
                     <img id="UE5 Blueprint" class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
-                    <img id="C++" class="category-image" src="Images/C++.png" alt="C++">
+                    <img id="System Design" class="category-image" src="Images/SystemDesign.png" alt="System Design">
                     <img id="UI Art" class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
 
                 </div>
@@ -65,41 +66,10 @@
 
         </div>
         <div class="box project-info-right">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/Cu24wYwmL-Q" title ="Ability Preview" allowfullscreen></iframe>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/-tc-pHnnNnY" title ="Map Showcase" allowfullscreen></iframe>
         </div>
     </div>
-    <!--    DESCRIPTION-->
-<!--    <div class="content-row">-->
-<!--        <div class="content-column">-->
-
-<!--        </div>-->
-<!--        <div class="content-column">-->
-<!--            <div class="box project-info-even-small">-->
-<!--                <p class="text preview-header">Description </p>-->
-<!--                <p class="text preview-content">-->
-<!--                    Goal of this project was to create a map that have all the functionality you would normally find in modern games.-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="content-column">-->
-<!--            <div class="box project-info-even-small">-->
-<!--                <p class="text preview-header">Overview </p>-->
-<!--                <ul class="text preview-content list">-->
-<!--                    <li>Accurate representation of the world and the distance between points of interest</li>-->
-<!--                    <li>POI icons on map with easily edited information</li>-->
-<!--                    <li>Zooming and Panning</li>-->
-<!--                    <li>Navigable with Mouse and Gamepad</li>-->
-<!--                    <li>Tracks player location and rotation</li>-->
-<!--                    <li>Placeable waypoint on the map that also adds a waypoint mesh in the world</li>-->
-<!--                    <li>Able to hover POI to view information about them</li>-->
-<!--                </ul>-->
-
-<!--            </div>-->
-<!--        </div>-->
-
-
-<!--    </div>-->
-    <!--    CONTRIBUTION LIST-->
+<!--    CONTRIBUTION LIST-->
     <div class="content-row">
         <div class="content-column">
             <div class="box project-contribution-list">
@@ -112,8 +82,6 @@
                     <li data-key="zooming-and-panning">Zooming & Panning</li>
                     <li data-key="map-icons">Map Icons</li>
                     <li data-key="waypoint">Waypoint</li>
-                    <li data-key="hover">Information about hovered elements</li>
-                    <li data-key="navigation">KBM & Gamepad support</li>
                 </ul>
 
                 <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
@@ -193,7 +161,7 @@
         <p class="text preview-header">UMapBase</p>
         <p class="text preview-content">
             MapBase has functionality to translate between <strong class="strong-text blue">WorldPosition</strong> and 
-            <strong class="strong-text blue">MapPosition</strong> and add icons. 
+            <strong class="strong-text blue">MapPosition</strong> and add <strong class="strong-text blue">POI icons</strong> to the map. 
             It can also retrieve an icon based on <strong class="strong-text blue">ID</strong> so that it can be altered. 
             It has some exposed variables.
         </p>
@@ -238,6 +206,84 @@
         <p class="text preview-content">
             From here I can start adding <strong class="strong-text blue">BP_MapPOIs</strong> to the world!
         </p>
+    </div>
+<!--Zooming And Panning-->
+    <div id="zooming-and-panning-content" class="hidden-content">
+        <p class="text preview-header">Zooming and Panning</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <p class="text preview-header">Mouse</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/dh8Ay-mJKKk" title ="Mouse Navigation" allowfullscreen></iframe>
+        <br>
+        <p class="text preview-content">
+            <strong class="strong-text blue">Zooming</strong> is done by detecting mouse wheel through 
+            <strong class="strong-text blue">NativeOnMouseWheel</strong>. The zoom is done by scaling 
+            an image nested in a horizontal and vertical scrollbox. Max zoom I used was 2.5x meaning 
+            the zoom goes from 1 to 2.5x. It has clamps to keep the map from overflowing sideways and 
+            smoothing when updating the image scale.
+            <br><br>
+            <strong class="strong-text blue">Panning</strong> is done via <strong class="strong-text blue">NativeOnMouseButtonDown</strong> 
+            where the widget location is saved, then <strong class="strong-text blue">NativeOnMouseMove</strong> 
+            is used to add offset from that point. The same logic is used here to keep the map from overflowing.
+        </p>
+        <br>
+        <p class="text preview-header">Gamepad</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/SVSDPOzz3iQ" title ="Gamepad Navigation" allowfullscreen></iframe>
+        <br>
+        <p class="text preview-content">
+            Both <strong class="strong-text blue">Zooming</strong> and <strong class="strong-text blue">Panning</strong> 
+            with gamepad is done via <strong class="strong-text blue">NativeOnAnalogValueChanged</strong>. Zooming is done with the 
+            Right Thumbstick Y-Axis and Panning is done by moving the gamepad cursor with Left Thumbstick 
+            near the edges of the map when zoomed in.
+        </p>
+        <br>
+        <img id="NativeOnAnalogValueChanged" src="Images/GameMap/NativeOnAnalogValueChanged.png" alt="NativeOnAnalogValueChanged" class="clickable-image content-image">
+    </div>
+<!--    Map Icons-->
+    <div id="map-icons-content" class="hidden-content">
+        <p class="text preview-header">Map Icons</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/UIArt.png" alt="UI Art">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/P0jJUZW5Dkw" title ="AddPOI" allowfullscreen></iframe>
+
+        <p class="text preview-content">
+            The information about each POI (Point of Interest) is set via <strong class="strong-text blue">exposed variables</strong> 
+            in the BP_MapPOI. Each Icon is also automatically assigned its own <strong class="strong-text blue">ID</strong> 
+            that is used to make updates to it, like if it has been discovered.
+        </p>
+        <br><br>
+        <img id="BP_MapPOI_ExposedVariables" src="Images/GameMap/BP_MapPOI_ExposedVariables.png" alt="BP_MapPOI_ExposedVariables" class="clickable-image content-image">
+        <p class="text preview-content">
+            OnBeginPlay the BP_MapCommunicator detects any of the BP_MapPOI actors placed in the world 
+            and adds an icon to the map using the world center point, offset from it and the world scale 
+            compared to the map. Each MapIcon is its own child widget that is forwarded the information 
+            assigned by the player, which is displayed on hover.
+        </p>
+        <br>
+        <img id="AddIconToMap" src="Images/GameMap/AddIconToMap.png" alt="AddIconToMap" class="clickable-image content-image">
+        <br>
+        <p class="text preview-content">
+            BP_MapPOI also has an attached box collision which reacts to the player and will set the POI as discovered.
+            Upon being discovered the map icon image will change to the discovered texture.
+        </p>
+        <br>
+        <img id="DiscoveredIcon" src="Images/GameMap/MapIcon_Hovered.png" alt="DiscoveredIcon" class="clickable-image content-image">
+    </div>
+    <div id="waypoint-content" class="hidden-content">
+        <p class="text preview-header">Waypoint</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        
     </div>
 
     <div id="lightbox" class="lightbox">
