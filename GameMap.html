@@ -26,7 +26,7 @@
 
     <h1 class="header-text">Game Map</h1>
     <div class="content-row">
-        <!--PROJECT DETAILS-->
+<!--PROJECT DETAILS-->
         <div class="content-column">
             <div class="box project-info-left">
                 <p class="text preview-header">Details</p>
@@ -48,20 +48,18 @@
                     <span class="value details">5 Weeks</span>
                 </div>
                 <br>
+<!--SUBJECTS-->
                 <p class="text preview-header">Subjects
-                    <!--SUBJECTS-->
                 <div class="category-image-block">
-                    <img id="UI/UX Design" class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
-                    <img id="Tech Design" class="category-image" src="Images/TechDesign.png" alt="Tech Design">
-                    <img id="C++" class="category-image" src="Images/C++.png" alt="C++">
+                    <img class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
+                    <img class="category-image" src="Images/TechDesign.png" alt="Tech Design">
+                    <img class="category-image" src="Images/SystemDesign.png" alt="System Design">
                 </div>
                 <div class="category-image-block">
-                    <img id="UE5 Blueprint" class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
-                    <img id="System Design" class="category-image" src="Images/SystemDesign.png" alt="System Design">
-                    <img id="UI Art" class="category-image" src="Images/UIArt.png" alt="UI Art"><br>
-
+                    <img class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+                    <img class="category-image" src="Images/C++.png" alt="C++">
+                    <img class="category-image" src="Images/UIArt.png" alt="UI Art">
                 </div>
-
             </div>
 
         </div>
@@ -185,7 +183,7 @@
         <p class="text preview-content">
             To get an exact image overview of the world I place a camera on the BP_MapCommunicator. 
             Set its aspect ratio to be the same as the landscapes dimensions, 
-            in my case that's 16x11, meaning the camera aspect ratio is 16/11 =
+            in my case that's 16x11, meaning the camera aspect ratio is 16/11 ≈
             <strong class="strong-text blue">1.4545</strong>
             <br><br>
             With aspect ratio correct I move the camera upwards until it fits 
@@ -213,6 +211,7 @@
         <div class="category-image-block">
             <img src="Images/TechDesign.png" alt="Tech Design">
             <img src="Images/C++.png" alt="C++">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
         </div>
         <p class="text preview-header">Mouse</p>
         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/dh8Ay-mJKKk" title ="Mouse Navigation" allowfullscreen></iframe>
@@ -276,13 +275,49 @@
         <br>
         <img id="DiscoveredIcon" src="Images/GameMap/MapIcon_Hovered.png" alt="DiscoveredIcon" class="clickable-image content-image">
     </div>
+    
+<!--Waypoint-->
     <div id="waypoint-content" class="hidden-content">
         <p class="text preview-header">Waypoint</p>
         <div class="category-image-block">
             <img src="Images/TechDesign.png" alt="Tech Design">
             <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
             <img src="Images/C++.png" alt="C++">
         </div>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/lXOCLhK4nyo" title ="AddPOI" allowfullscreen></iframe>
+        <p class="text preview-content">
+            A <strong class="strong-text blue">waypoint mesh</strong> exists in the BP_MapCommunicator and is 
+            moved and made visible when a map waypoint is placed on the widget. World position is found by adjusting the 
+            Vector2D to match the world rotation, then scaling the offset and subtracting it to the anchor point
+        </p>
+        <br>
+        <img id="MapToWorldPosition" src="Images/GameMap/MapToWorldPosition.png" alt="MapToWorldPosition" class="clickable-image content-image">
+        <p class="text preview-content">
+            Below you can see:
+        </p>
+        <ul class="text preview-content list">
+            <li>Map with waypoint.</li>
+            <li>Top-down image of the world with the waypoint mesh visible.</li>
+            <li>Image where they are stacked on each other but the top-down image of the world has slight opacity
+                so that both can be seen near perfectly synced.</li>
+        </ul>
+        <br>
+        <img id="MapWithWaypoint" src="Images/GameMap/MapWithWaypoint.png" alt="MapWithWaypoint" class="clickable-image small">
+        <img id="WorldWithWaypoint" src="Images/GameMap/WorldWithWaypoint.png" alt="WorldWithWaypoint" class="clickable-image small">
+        <img id="MapAndWorldWithWaypoint" src="Images/GameMap/MapAndWorldWithWaypoint.png" alt="MapAndWorldWithWaypoint" class="clickable-image small">
+        <p class="text preview-content">
+            Inputs for changing the waypoint is Middle Mouse Button through <strong class="strong-text blue">NativeOnMouseButtonDown</strong> 
+            and Gamepad Face Button Left via <strong class="strong-text blue">NativeOnKeyDown</strong>.
+        </p>
+        <br>
+        <img id="PlacingWaypoint" src="Images/GameMap/PlacingWaypoint.png" alt="PlacingWaypoint" class="clickable-image content-image">
+        <p class="text preview-content">
+            The function to update the waypoint will create it if needed, otherwise just set the icon/mesh to the updated positions.
+        </p>
+        <br>
+        <img id="UpdateWaypoint" src="Images/GameMap/UpdateWaypoint.png" alt="UpdateWaypoint" class="clickable-image content-image">
         
     </div>
 
