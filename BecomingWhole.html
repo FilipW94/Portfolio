@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Becoming Whole</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar (unchanged) -->
+<div class="navbar">
+    <button class="nav-title" onclick="location.href='index.html'">
+        Filip Wilhelmsson <span class="nav-role">| Technical & UI/UX Designer</span>
+    </button>
+    <div class="nav-right">
+        <button class="nav-button-selected" onclick="location.href='index.html'">Portfolio</button>
+        <button class="nav-button" onclick="location.href='Resume.html'">Resume</button>
+        <button class="nav-button" onclick="location.href='Contact.html'">Contact</button>
+        <button class="nav-button" onclick="location.href='About.html'">About me</button>
+    </div>
+</div>
+
+<!-- Content -->
+
+<div class="content-window">
+
+    <h1 class="header-text">Becoming Whole</h1>
+    <div class="content-row">
+        <!--PROJECT DETAILS-->
+        <div class="content-column">
+            <div class="box project-info-left">
+                <p class="text preview-header">Details</p>
+                <p class="text preview-content">
+                <div class="text-row">
+                    <span class="label details">Status:</span>
+                    <span class="value details">Finished</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Engine:</span>
+                    <span class="value details">Unreal Engine 5</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Role:</span>
+                    <span class="value details">Solo Project</span>
+                </div>
+                <div class="text-row">
+                    <span class="label details">Duration:</span>
+                    <span class="value details">10 Weeks</span>
+                </div>
+                <br>
+                <!--SUBJECTS-->
+                <p class="text preview-header">Subjects
+                <div class="category-image-block">
+                    <img class="category-image" src="Images/UIUXDesign.png" alt="UI/UX Design">
+                    <img class="category-image" src="Images/TechDesign.png" alt="Tech Design">
+                    <img class="category-image" src="Images/SystemDesign.png" alt="System Design">
+                </div>
+                <div class="category-image-block">
+                    <img class="category-image" src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+                    <img class="category-image" src="Images/C++.png" alt="C++">
+                    <img class="category-image" src="Images/UIArt.png" alt="UI Art">
+                </div>
+            </div>
+
+        </div>
+        <div class="box project-images">
+            <img id="DDE Kickstarter poster" src="Images/BecomingWhole/Showcase%20photo.png" alt="DDE Kickstarter Poster" class="clickable-image">
+        </div>
+    </div>
+    <!--    CONTRIBUTION LIST-->
+    <div class="content-row">
+        <div class="content-column">
+            <div class="box project-contribution-list">
+                <p class="text preview-header">Highlights</p>
+
+                <ul class="text preview-content list">
+                    <li data-key="overview">Overview</li>
+                    <li data-key="Trash Cart">Trash cart</li>
+                    <li data-key="Notes">Notes</li>
+                    <li data-key="Inventory">Inventory</li>
+                </ul>
+
+                <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
+                <br>
+                <p class="text preview-content">(click any image to enlarge)</p>
+            </div>
+        </div>
+        <!--Default Content View-->
+        <div class="box project-contribution-content" id="contentBox">
+            <p class="text preview-header">Overview</p>
+            <p class="text preview-content">
+                The aim with this project was to create an intro/demo level for a horror game
+                where they player can become familiar with the controls and narrative.
+                <br><br>
+                It was my graduation project when studying the Game Design programme at
+                Futuregames Stockholm and lasted for 10 weeks. The premise, pacing and use
+                of everyday tasks as progression is based on short horror games like the
+                Chilla's Art and Fears to Fathom series.
+            </p>
+            <br>
+            <p class="text preview-header">Narrative</p>
+            <p class="text preview-content">
+                Protagonist leads an unfulfilling life as a public cleaner. Barely making any money,
+                having no aspirations within the field and being treated terribly by co-workers has
+                made the protagonist hate life.
+                <br><br>
+                That is until they receive a mysterious phone call from a Probate attorney telling
+                them they are the sole heir of a large lodge up north.
+                <br><br>
+                Driven by both monetary gain and curiosity, the protagonist journeys to the old
+                estate to see what it is all about and assess what can be salvaged or sold from it. 
+            </p>
+            <p class="text preview-header">Playthrough</p>
+            <br>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/eQLk6EYBeOA" title ="AddPOI" allowfullscreen></iframe>
+        </div>
+    </div>
+<!--Overview-->
+    <div id="overview-content" class="hidden-content">
+        <p class="text preview-header">Overview</p>
+        <p class="text preview-content">
+            The aim with this project was to create an intro/demo level for a horror game 
+            where they player can become familiar with the controls and narrative.
+            <br><br>
+            It was my graduation project when studying the Game Design programme at 
+            Futuregames Stockholm and lasted for 10 weeks. The premise, pacing and use 
+            of everyday tasks as progression is based on short horror games like the 
+            Chilla's Art and Fears to Fathom series.
+        </p>
+        <br>
+        <p class="text preview-header">Narrative</p>
+        <p class="text preview-content">
+            Protagonist leads an unfulfilling life as a public cleaner. Barely making any money, 
+            having no aspirations within the field and being treated terribly by co-workers has 
+            made the protagonist hate life.
+            <br><br>
+            That is until they receive a mysterious phone call from a Probate attorney telling 
+            them they are the sole heir of a large lodge up north.
+            <br><br>
+            Driven by both monetary gain and curiosity, the protagonist journeys to the old 
+            estate to see what it is all about and assess what can be salvaged or sold from it. 
+        </p>
+        <p class="text preview-header">Playthrough</p>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/eQLk6EYBeOA" title ="AddPOI" allowfullscreen></iframe>
+    </div>
+<!--Trash Cart-->
+    <div id="Trash Cart-content" class="hidden-content">
+        <p class="text preview-header">Trash Cart</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/UIArt.png" alt="UI Art">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <p class="text preview-content">
+            As the protagonist is a cleaner, the <strong class="strong-text blue">trash cart</strong> is a major part of the gameplay. 
+            It moves <strong class="strong-text blue">along a spline</strong> through the different areas with the ability to go either 
+            direction. The cart has its own input mapping context and with its <strong class="strong-text blue">own controls</strong>. 
+            As the player's goal is mainly to pick up trash, the trashcart serves as an 
+            <strong class="strong-text blue">anchor point</strong> that the player sticks close to and drops trash into.
+        </p>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/PopP8z5DI_g " title ="AddPOI" allowfullscreen></iframe>
+        <br>
+        <p class="text preview-content">
+            The distance you can travel along the spline is <strong class="strong-text blue">tied to the current objective</strong> the player is on. 
+            For example the trashcart can only travel between the public restrooms and the cleaning supply 
+            room before objective 9, which is triggered when the player opens the back door that leads to 
+            the loading dock and ramp leading to the platform. When this objective is triggered the trashcart 
+            can travel down the ramp but not past the platform door, which needs to be open to progress past.
+            <br><br>
+            The trashcart uses the <strong class="strong-text blue">TravelAlongSpline</strong> 
+            function but the values are clamped to prevent it from going into areas the player isn't supposed to be in yet.
+            <br><br>
+            <img id="TC forward input" src="Images/BecomingWhole/Becoming%20Whole%20Cart%20OnforwardInput.png" alt="OnForwardInput" class="clickable-image content-image">
+            <br>
+            The trash carts state is also <strong class="strong-text blue">saved between sessions</strong>, this way it will be where the player left it and
+            interact with objects correctly.
+            <br><br>
+            <img id="TC Saved" src="Images/BecomingWhole/Becoming%20Whole%20Trashcart%20Saved.png" alt="OnForwardInput" class="clickable-image content-image">
+            <br>
+        </p>
+    </div>
+<!--Notes-->
+    <div id="Notes-content" class="hidden-content">
+        <p class="text preview-header">Notes</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/UIArt.png" alt="UI Art">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <p class="text preview-content">
+            Throughout the game the player finds <strong class="strong-text blue">notes and images</strong>. 
+            These can contain <strong class="strong-text blue">important information</strong> that needs to 
+            be accessible at later stages in the game, for this reason I added a 
+            <strong class="strong-text blue">journal</strong> that tracks the <strong class="strong-text blue">readable objects</strong> 
+            the player has interacted with. 
+            <br><br>
+            The most important thing the player interacts with in the demo is the 
+            <strong class="strong-text blue">protagonists schedule</strong>. 
+            It will tell the player <strong class="strong-text blue">what to do</strong> and in 
+            <strong class="strong-text blue">what order</strong>, and since the listed tasks are relevant 
+            through the entire demo, they need to be <strong class="strong-text blue">easily accessible</strong> 
+            to prevent <strong class="strong-text red">backtracking</strong> or other <strong class="strong-text red">annoyances</strong>.
+        </p>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/mLpVHaMpSC8" title ="AddPOI" allowfullscreen></iframe>
+        <br>
+    </div>
+<!--Inventory-->
+    <div id="Inventory-content" class="hidden-content">
+        <p class="text preview-header">Inventory</p>
+        <div class="category-image-block">
+            <img src="Images/TechDesign.png" alt="Tech Design">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/UIArt.png" alt="UI Art">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <p class="text preview-content">
+            The character window is made up of: 
+        </p>
+        <ul class="text preview-content list">
+            <li>Inventory</li>
+            <li>Item description panel</li>
+            <li>Held Item</li>
+            <li>Player Health (not implemented)</li>
+        </ul>
+        <br>
+        <p class="text preview-content">
+            The inventory space starts with 3 and is meant to increase incrementally by 3
+            throughout the game to a max of 12. Item management in the demo was always meant 
+            to be minimal, but it was still important for it be taught. After the demo the game 
+            was meant to become more of a direct horror game with some resource management. 
+            It was at this stage the inventory  was to become a more critical part of the gameplay.
+        </p>
+        <br>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/mLpVHaMpSC8" title ="AddPOI" allowfullscreen></iframe>
+        <br>
+    </div>
+    
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
