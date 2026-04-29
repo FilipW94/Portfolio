@@ -78,6 +78,7 @@
                     <li data-key="Trash Cart">Trash cart</li>
                     <li data-key="Notes">Notes</li>
                     <li data-key="Inventory">Inventory</li>
+                    <li data-key="Video">Video Settings</li>
                 </ul>
 
                 <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
@@ -238,6 +239,76 @@
         <br>
         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/mLpVHaMpSC8" title ="AddPOI" allowfullscreen></iframe>
         <br>
+    </div>
+<!--Video Settings-->
+    <div id="Video-content" class="hidden-content">
+        <p class="text preview-header">Video Settings</p>
+        <div class="category-image-block">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/C++.png" alt="C++">
+            <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
+        </div>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/mLpVHaMpSC8" title ="AddPOI" allowfullscreen></iframe>
+        <br>
+        <p class="text preview-content">
+            The video settings used are my third iteration of basic video settings. The ones i usually make are:
+        </p>
+        <ul class="text preview-content list">
+            <li><strong class="strong-text blue">Display Mode</strong></li>
+            <li><strong class="strong-text blue">Resolution</strong></li>
+            <li><strong class="strong-text blue">Graphics Scaling</strong></li>
+            <li><strong class="strong-text blue">Framerate Cap</strong></li>
+            <li><strong class="strong-text blue">VSync</strong></li>
+        </ul>
+        <br>
+        <p class="text preview-content">
+            My other implementations have been manager style classes, but they quickly become hard to manage as 
+            more settings are added. This time around I wanted a setup that made adding new settings clean and easy. 
+            For this reason I opted for 2 base classes that work together. The classes are:
+        </p>
+        <ul class="text preview-content list">
+            <li><strong class="strong-text blue">SettingsWidget (UUserWidget)</strong></li>
+            <li><strong class="strong-text blue">SettingsBase (UObject)</strong></li>
+        </ul>
+        <br>
+        <p class="text preview-content">
+            The SettingsBase mainly has variables and functionality to move through arrays,
+            these are declared or assigned in the child classes to represent each settings' different options.
+        </p>
+        <br>
+        <img id="SettingsBase" src="Images/BecomingWhole/SettingsBase.png" alt="SettingsBase" class="clickable-image content-image">
+        <br>
+        <p class="text preview-content">
+            Each SettingsWidget instance have an assignable USettingBase variable. This is meant 
+            for the user to assign whichever child class handles the desired settings 
+            category. Each child looks about the same besides their corresponding settings array
+            and the function they call to update the setting. Below are examples of the 
+            <strong class="strong-text blue">Display Mode</strong>, 
+            <strong class="strong-text blue">VSync</strong> and
+            <strong class="strong-text blue">Graphics Scaling</strong> settings.
+        </p>
+        <br>
+        <img id="Display Mode" src="Images/BecomingWhole/DisplayMode.png" alt="Display Mode" class="clickable-image content-image small">
+        <img id="VSync" src="Images/BecomingWhole/VSync.png" alt="VSync" class="clickable-image content-image small">
+        <img id="Graphics Scaling" src="Images/BecomingWhole/GraphicsScaling.png" alt="Graphics Scaling" class="clickable-image content-image small">
+        <br>
+        <p class="text preview-content"> 
+        In short, they have functionality to:
+        </p>
+        <ul class="text preview-content list">
+            <li>Define variables in the constructor</li>
+            <li>Functionality to retrieve current settings from <strong class="strong-text blue">UGameUserSettings</strong>, 
+                Needed for first time start-up or if hardware benchmark settings has been applied.</li>
+            <li>Apply settings</li>
+            <li>Revert settings</li>
+        </ul>
+        <p class="text preview-content">
+            When using the system i apply the video settings in blueprint like:
+        </p>
+        <br>
+        <img id="Apply Video Settings" src="Images/BecomingWhole/ApplySettings.png" alt="Apply Video Settings" class="clickable-image content-image">
+        
+
     </div>
     
     <div id="lightbox" class="lightbox">
