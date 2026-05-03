@@ -79,6 +79,7 @@
                     <li data-key="Notes">Notes</li>
                     <li data-key="Inventory">Inventory</li>
                     <li data-key="Video">Video Settings</li>
+                    <li data-key="Volume">Volume Settings</li>
                 </ul>
 
                 <p class="text preview-content"><br>(Click any of the list items to view their related content)</p>
@@ -151,7 +152,6 @@
         <div class="category-image-block">
             <img src="Images/TechDesign.png" alt="Tech Design">
             <img src="Images/SystemDesign.png" alt="System Design">
-            <img src="Images/UIArt.png" alt="UI Art">
             <img src="Images/C++.png" alt="C++">
         </div>
         <p class="text preview-content">
@@ -171,8 +171,7 @@
             the loading dock and ramp leading to the platform. When this objective is triggered the trashcart 
             can travel down the ramp but not past the platform door, which needs to be open to progress past.
             <br><br>
-            The trashcart uses the <strong class="strong-text blue">TravelAlongSpline</strong> 
-            function but the values are clamped to prevent it from going into areas the player isn't supposed to be in yet.
+            The trashcart moves forward via <strong class="strong-text blue">player input</strong> like so:
             <br><br>
             <img id="TC forward input" src="Images/BecomingWhole/Becoming%20Whole%20Cart%20OnforwardInput.png" alt="OnForwardInput" class="clickable-image content-image">
             <br>
@@ -190,7 +189,6 @@
             <img src="Images/TechDesign.png" alt="Tech Design">
             <img src="Images/SystemDesign.png" alt="System Design">
             <img src="Images/UIArt.png" alt="UI Art">
-            <img src="Images/C++.png" alt="C++">
         </div>
         <p class="text preview-content">
             Throughout the game the player finds <strong class="strong-text blue">notes and images</strong>. 
@@ -217,7 +215,6 @@
             <img src="Images/TechDesign.png" alt="Tech Design">
             <img src="Images/SystemDesign.png" alt="System Design">
             <img src="Images/UIArt.png" alt="UI Art">
-            <img src="Images/C++.png" alt="C++">
         </div>
         <p class="text preview-content">
             The character window is made up of: 
@@ -237,7 +234,7 @@
             It was at this stage the inventory  was to become a more critical part of the gameplay.
         </p>
         <br>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/mLpVHaMpSC8" title ="AddPOI" allowfullscreen></iframe>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/wA81F2My7LU" title ="Inventory" allowfullscreen></iframe>
         <br>
     </div>
 <!--Video Settings-->
@@ -248,7 +245,7 @@
             <img src="Images/C++.png" alt="C++">
             <img src="Images/UE5Blueprint.png" alt="UE5 Blueprint">
         </div>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/mLpVHaMpSC8" title ="AddPOI" allowfullscreen></iframe>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/K5FwxlRIWOM" title ="Video Settings" allowfullscreen></iframe>
         <br>
         <p class="text preview-content">
             The video settings used are my third iteration of basic video settings. The ones i usually make are:
@@ -307,10 +304,63 @@
         </p>
         <br>
         <img id="Apply Video Settings" src="Images/BecomingWhole/ApplySettings.png" alt="Apply Video Settings" class="clickable-image content-image">
-        
+    </div>
+<!--Volume Settings-->
+    <div id="Volume-content" class="hidden-content">
+        <p class="text preview-header">Volume Settings</p>
+        <div class="category-image-block">
+            <img src="Images/UIUXDesign.png" alt="UI/UX Design">
+            <img src="Images/SystemDesign.png" alt="System Design">
+            <img src="Images/C++.png" alt="C++">
+        </div>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/P6hdqmeZIDs" title ="Volume Settings" allowfullscreen></iframe>
+        <br>
+        <p class="text preview-content">
+            The audio settings I set up are only for volumes. They are:
+        </p>
+        <ul class="text preview-content list">
+            <li><strong class="strong-text blue">Master Volume</strong></li>
+            <li><strong class="strong-text blue">Music Volume</strong></li>
+            <li><strong class="strong-text blue">Ambiance Volume</strong></li>
+            <li><strong class="strong-text blue">SFX Volume</strong></li>
+            <li><strong class="strong-text blue">Voice Volume</strong></li>
+        </ul>
+        <p class="text preview-content">
+            There is only 1 class that handles all volumes, and they differ based on some variables assigned in the details panel.
+        </p>
+        <br>
+        <img id="Volume Details panel" src="Images/BecomingWhole/VolumeSettings_DetailsPanel.png" alt="Volume Details Panel" class="clickable-image content-image">
+        <br>
+        <p class="text preview-content">
+            The class is built to handle both a slider that the user can adjust with their mouse, or by clicking the arrows on each side that increases/decreases the volume.
+        </p>
+        <br>
+        <img id="Volume Settings Bar" src="Images/BecomingWhole/VolumeSettingsBar.png" alt="Volume Settings Bar" class="clickable-image content-image">
+        <br>
+        <p class="text preview-content">
+            Each element except master volume also has a toggle to enable sounds linked to it.  
+            It plays some looping sounds so that each volume category can be tweaked to the users liking. 
+            This is to allow the player to mix and match the volumes from the menu without having to play -> adjust -> play -> adjust etc.
+            <br>
+            <br>
+            The music volume toggle in my case plays a soft melodic sound, the ambiance is just some wind, 
+            the SFX is a loop of footsteps, flashlight toggle sound and door opening. 
+            And lastly the voice looping sound is just some repeating sentence I found.
+            <br><br>
+            Each volume setting is then saved in an <strong class="strong-text blue">extended GameUserSettings</strong> class.
+        </p>
+        <br>
+        <img id="ExtendedGameUserSettings" src="Images/BecomingWhole/ExtendedGameUserSettings.png" alt="ExtendedGameUserSettings" class="clickable-image content-image">
+        <br>
+        <p class="text preview-content">
+            This is something that could be easily adjusted though if needed. 
+            If you want to save the volume values in a regular <strong class="strong-text blue">SaveGame class</strong>, 
+            you would only need to adjust these 2 functions:
+        </p>
+        <br>
+        <img id="SaveLoadVolumes" src="Images/BecomingWhole/SaveLoadVolumes.png" alt="SaveLoadVolumes" class="clickable-image content-image">
 
     </div>
-    
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img" alt="Enlarged image" src="Not decided yet... i guess">
