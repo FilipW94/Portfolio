@@ -428,6 +428,9 @@ html, body {
     height: 250px;
     overflow: hidden;
 }
+.box.banner.smaller {
+    height: 200px;
+}
 .box.banner.dde-game-menu {
     border: 0;
     justify-self: center;
