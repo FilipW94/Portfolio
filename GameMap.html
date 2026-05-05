@@ -67,7 +67,7 @@
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="350" src="https://www.youtube.com/embed/-tc-pHnnNnY" title ="Map Showcase" allowfullscreen></iframe>
         </div>
     </div>
-<!--    CONTRIBUTION LIST-->
+<!--CONTRIBUTION LIST-->
     <div class="content-row">
         <div class="content-column">
             <div class="box project-contribution-list">
@@ -92,7 +92,7 @@
             <p class="text preview-header">Overview</p>
             <ul class="text preview-content list">
                 <li>Accurate representation of the world and the distance between points of interest</li>
-                <li>POI icons on map with easily edited information</li>
+                <li>POI icons on map with easily editable information</li>
                 <li>Zooming and Panning</li>
                 <li>Navigable with Mouse and Gamepad</li>
                 <li>Tracks player location and rotation</li>
@@ -106,7 +106,7 @@
         <p class="text preview-header">Overview</p>
         <ul class="text preview-content list">
             <li>Accurate representation of the world and the distance between points of interest</li>
-            <li>POI icons on map with easily edited information</li>
+            <li>POI icons on map with easily editable information</li>
             <li>Zooming and Panning</li>
             <li>Navigable with Mouse and Gamepad</li>
             <li>Tracks player location and rotation</li>
@@ -129,7 +129,8 @@
         <p class="text preview-content">
             MapCommunicator is an actor placed in the world and serves as the maps <strong class="strong-text blue">anchor</strong>. 
             It has an actor variable for <strong class="strong-text blue">WorldBase</strong> which I use to reference the landscape. 
-            With the landscape ref I place the communicator perfectly centered (more info in the under  <strong class="strong-text blue">Setup</strong>)
+            With the landscape ref I place the communicator perfectly centered 
+            (more info under <strong class="strong-text blue">Setup</strong>)
         </p>
         <br>
         <p class="text preview-header">BP_MapPOI</p>
@@ -166,6 +167,7 @@
         <br>
         <img id="MapVariables" src="Images/GameMap/MapBase_ExposedVariables.png" alt="MapVariables" class="clickable-image content-image">
     </div>
+<!--Setup-->
     <div id="setup-content" class="hidden-content">
         <p class="text preview-header">Setup</p>
         <div class="category-image-block">
@@ -224,7 +226,7 @@
             smoothing when updating the image scale.
             <br><br>
             <strong class="strong-text blue">Panning</strong> is done via <strong class="strong-text blue">NativeOnMouseButtonDown</strong> 
-            where the widget location is saved, then <strong class="strong-text blue">NativeOnMouseMove</strong> 
+            where the mouse location on the widget is saved, then <strong class="strong-text blue">NativeOnMouseMove</strong> 
             is used to add offset from that point. The same logic is used here to keep the map from overflowing.
         </p>
         <br>
@@ -260,9 +262,10 @@
         <br>
         <img id="BP_MapPOI_ExposedVariables" src="Images/GameMap/BP_MapPOI_ExposedVariables.png" alt="BP_MapPOI_ExposedVariables" class="clickable-image content-image">
         <p class="text preview-content">
-            OnBeginPlay the BP_MapCommunicator detects any of the BP_MapPOI actors placed in the world 
-            and adds an icon to the map using the world center point, offset from it and the world scale 
-            compared to the map. Each MapIcon is its own child widget that is forwarded the information 
+            <strong class="strong-text blue">OnBeginPlay</strong> the BP_MapCommunicator detects any of the 
+            BP_MapPOI actors placed in the world and adds an icon to the map using the world center point, 
+            offset from it and the world scale compared to the map. 
+            Each MapIcon is its own child widget that is forwarded the information 
             assigned by the player, which is displayed on hover.
         </p>
         <br>
@@ -290,7 +293,7 @@
         <p class="text preview-content">
             A <strong class="strong-text blue">waypoint mesh</strong> exists in the BP_MapCommunicator and is 
             moved and made visible when a map waypoint is placed on the widget. World position is found by adjusting the 
-            Vector2D to match the world rotation, then scaling the offset and subtracting it to the anchor point
+            Vector2D to match the world rotation, then scaling the offset and subtracting it to the anchor point.
         </p>
         <br>
         <img id="MapToWorldPosition" src="Images/GameMap/MapToWorldPosition.png" alt="MapToWorldPosition" class="clickable-image content-image">
