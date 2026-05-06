@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*<-- TEXT Classes ->>*/
 .text.preview-header {
     color: #81AAFF;
@@ -13,7 +17,12 @@
     margin: 4px 0 0 0;    /* small top margin */
     text-align: left;
     font-size: 20px;
+    color: whitesmoke;
     font-family: 'Calibri Light', Times, serif;
+    /*font-family: "Inter", "Helvetica Neue", Arial, sans-serif;*/
+    /*font-weight: 400;*/
+    /*line-height: 1.4;*/
+    /*letter-spacing: -0.01em;*/
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -39,7 +48,8 @@
 }
 
 .header-text {
-    font-family: 'Calibri', Times, sans-serif;
+    /*font-family: 'Calibri', Times, sans-serif;*/
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     font-weight: 700;
     color: #81AAFF;
@@ -54,6 +64,7 @@
 .nav-title {
     display: flex;
     align-items: center;
+
     font-family: 'Calibri Light', Times, serif;
     font-size: 30px;         /* name size */
     font-weight: 700;         /* bold name */
@@ -80,6 +91,16 @@
 .text-link:hover {
     opacity: 0.85;
 }
+.strong-text {
+    font-weight: bold;
+}
+.strong-text.blue {
+    color: #81AAFF;
+}
+.strong-text.red {
+    color: indianred;
+}
+
 /*<-- TEXT Classes END ->>*/
 
 /*<-- BUTTON Classes ->>*/
@@ -240,12 +261,6 @@ html, body {
     opacity: 0.7;
 }
 
-.role-text {
-    font-family: 'Calibri Light', Times, serif;
-    font-size: 18px;
-    color: rgb(180,180,180);
-}
-
 .portfolio-layout {
     display: flex;
     gap: 50px;
@@ -320,7 +335,6 @@ html, body {
     text-align: center;
 }
 
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -355,50 +369,23 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-/* Buttons */
-.banner-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.4);
-    border: none;
-    color: #fff;
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.banner-btn:hover {
-    background-color: rgba(0,0,0,0.7);
-}
-
-.banner-btn.left {
-    left: 10px;
-}
-
-.banner-btn.right {
-    right: 10px;
-}
+/*BOX Classes*/
 .box {
-    border: 1px solid #81AAFF;
+    /*border: 1px solid #81AAFF;*/
     width: 350px;
-    background: black linear-gradient(
-            to bottom,
-            rgb(17, 17, 17) 0%,
-            rgb(17, 17, 17) 100%
-    );
+    /*background: black linear-gradient(*/
+    /*        to bottom,*/
+    /*        rgb(17, 17, 17) 0%,*/
+    /*        rgb(17, 17, 17) 100%*/
+    /*);*/
 }
 .box.banner {
     position: relative;     /* needed for buttons to float */
     width: 1050px;
     height: 250px;
     overflow: hidden;
+    border: 0;
 }
 .box.banner.smaller {
     height: 200px;
@@ -487,7 +474,7 @@ html, body {
     padding: 20px;
 }
 .box.gamemap-description {
-    border-bottom: 2px solid #81AAFF;
+    /*border-bottom: 2px solid #81AAFF;*/
     height: 210px;
 }
 .box.gamemap-details {
@@ -514,8 +501,6 @@ html, body {
     column-gap: 50px;
 }
 
-
-
 .view-project {
     display: flex;
     align-items: center;
@@ -531,11 +516,6 @@ html, body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
-}
-.view-project.project-images {
-    width: 480px;
-    height: 320px;
-    
 }
 
 .view-project:hover {
@@ -558,15 +538,6 @@ html, body {
 .hidden-content {
     display: none;
 }
-.strong-text {
-    font-weight: bold;
-}
-.strong-text.blue {
-    color: #81AAFF;
-}
-.strong-text.red {
-    color: indianred;
-}
 
 /* Normal image hover effect */
 .clickable-image {
@@ -588,7 +559,6 @@ html, body {
     cursor: pointer;
     transition: 0.3s ease;
 }
-
 .clickable-image:hover {
     transform: scale(1.02);
 }
@@ -605,7 +575,6 @@ html, body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
 }
-
 /* Enlarged image */
 .lightbox-content {
     display: block;
