@@ -1,26 +1,43 @@
 /*<-- TEXT Classes ->>*/
-.info-text {
+.text.preview-header {
+    color: #81AAFF;
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Calibri', Times, sans-serif;
+    font-weight: bold;
+    margin: 5px 5px 5px 10px;
+    padding-left: 5px;
+}
+.text.preview-content {
+    margin: 4px 0 0 0;    /* small top margin */
+    text-align: left;
+    font-size: 20px;
     font-family: 'Calibri Light', Times, serif;
-    font-size: 20px;           /* readable size */
-    color: rgb(220,220,220);   /* matches your dark theme */
-    line-height: 1.3;          /* spacing for readability */
-    text-align: left;         /* optional: center text by default */
-    margin: 0 0 20px 0;         /* top:0, bottom:20px */
-    font-weight: 300;           /* spacing after the text */
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.info-text-bold {
-    font-family: 'Calibri Light', Times, serif;
-    font-size: 20px;           /* readable size */
-    color: rgb(220,220,220);   /* matches your dark theme */
-    line-height: 1.3;          /* spacing for readability */
-    text-align: left;         /* optional: center text by default */
-    margin: 0 0 20px 0;         /* top:0, bottom:20px */
-    font-weight: 700;           /* spacing after the text */
+.text.preview-content.bold {
+    font-weight: bold;
 }
-.about-text {
-    flex: 1 1 500px;              /* flexible width, minimum 500px */
-    min-width: 300px;             /* don’t shrink too small on mobile */
+.text.preview-details {
+    margin-top: 3px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Calibri', Times, serif;
+    padding-left: 15px;
 }
+.text.preview-content.list {
+    margin: 10px 0 0 20px;
+}
+.label.details {
+    font-weight: 700;
+    text-align: left;
+}
+.value.details {
+    text-align: left;
+}
+
 .header-text {
     font-family: 'Calibri', Times, sans-serif;
     font-size: 40px;
@@ -34,7 +51,6 @@
 .header-text.center {
     text-align: center;
 }
-
 .nav-title {
     display: flex;
     align-items: center;
@@ -46,6 +62,11 @@
     border: none;
     cursor: pointer;
     padding: 8px 16px;
+}
+.nav-title .nav-role {
+    font-weight: 400;        /* thinner than name */
+    font-size: 25px;         /* optional smaller size */
+    margin-left: 6px;        /* small spacing after name */
 }
 .text-link {
     color: rgb(220,220,220);   /* same color as your text */
@@ -59,12 +80,6 @@
 .text-link:hover {
     opacity: 0.85;
 }
-/* Role inside the button */
-.nav-title .nav-role {
-    font-weight: 400;        /* thinner than name */
-    font-size: 25px;         /* optional smaller size */
-    margin-left: 6px;        /* small spacing after name */
-}
 /*<-- TEXT Classes END ->>*/
 
 /*<-- BUTTON Classes ->>*/
@@ -75,28 +90,17 @@
     background-color: rgba(0,0,0,0);
     color: rgb(200,200,200);
     border: none;
-    border-radius: 4px;
     padding: 8px 16px;
     font-size: 20px;
     cursor: pointer;
     margin-left: 10px;
+    transition: transform 0.2s ease;
 }
-.navbar .nav-button-selected {
-    display: flex;
-    font-family: 'Calibri Light', Times, serif;
-    align-items: center;
-    background-color: rgba(0,0,0,0);
-    color: rgb(200,200,200);
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 10px;
-    text-decoration: underline;
+.navbar .nav-button.selected {
+    color: white;
 }
 .nav-button:hover {
-    text-decoration: underline;
+    color: white;
 }
 /*<-- BUTTON Classes END->>*/
 body {
@@ -341,38 +345,6 @@ html, body {
     align-items: center;
 }
 
-.text.preview-header {
-    color: #81AAFF;
-    display: flex;
-    text-align: center;
-    font-size: 25px;
-    font-family: 'Calibri', Times, sans-serif;
-    font-weight: bold;
-    margin: 5px 5px 5px 10px;
-    padding-left: 5px;
-}
-.text.preview-content {
-    margin: 4px 0 0 0;    /* small top margin */
-    text-align: left;
-    font-size: 20px;
-    font-family: 'Calibri Light', Times, serif;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.text.preview-content.bold {
-    font-weight: bold;
-}
-.text.preview-content.list {
-    margin: 10px 0 0 20px;
-}
-.text.preview-details {
-    margin-top: 3px;
-    text-align: left;
-    font-size: 20px;
-    font-family: 'Calibri', Times, serif;
-    padding-left: 15px;
-}
-
 .banner-image {
     width: 100%;      /* fills the box width */
     height: 100%;     /* fills the box height */
@@ -542,14 +514,7 @@ html, body {
     column-gap: 50px;
 }
 
-.label.details {
-    font-weight: 700;
-    text-align: left;
-}
 
-.value.details {
-    text-align: left;
-}
 
 .view-project {
     display: flex;
