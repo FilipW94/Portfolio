@@ -17,12 +17,7 @@
     margin: 4px 0 0 0;    /* small top margin */
     text-align: left;
     font-size: 20px;
-    color: whitesmoke;
     font-family: 'Calibri Light', Times, serif;
-    /*font-family: "Inter", "Helvetica Neue", Arial, sans-serif;*/
-    /*font-weight: 400;*/
-    /*line-height: 1.4;*/
-    /*letter-spacing: -0.01em;*/
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -83,11 +78,9 @@
     color: rgb(220,220,220);   /* same color as your text */
     text-decoration: underline;
 }
-
 .text-link:visited {
     color: rgb(220,220,220);   /* prevents purple visited links */
 }
-
 .text-link:hover {
     opacity: 0.85;
 }
@@ -291,6 +284,52 @@ html, body {
     width: 50px;
 }
 
+.entry-button {
+    background-image: url("Images/EntryButton_InactiveV3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 5px;
+
+    padding-left: 15px;
+    width: 225px;
+    aspect-ratio: 225 / 35; /* keeps proportions if resized */
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    font-family: 'Calibri Light', Times, serif;
+    transition: transform 0.2s ease;
+}
+
+/* Hover (temporary) */
+.entry-button:hover {
+    background-image: url("Images/EntryButton_ActiveV2.png");
+    color: #81AAFF;
+    width: 275px;
+    aspect-ratio: 275 / 35;
+    transform: translateX(10px);
+}
+
+/* Click (very brief press) */
+.entry-button:active {
+    background-image: url("Images/EntryButton_ActiveV2.png");
+    color: #81AAFF;
+    width: 275px;
+    aspect-ratio: 275 / 35;
+}
+
+/* Persistent selected state */
+.entry-button.active {
+    background-image: url("Images/EntryButton_ActiveV2.png");
+    color: #81AAFF;
+    width: 275px;
+    aspect-ratio: 275 / 35;
+}
+
 .two-column-container {
     display: flex;
     gap: 10px;
@@ -372,13 +411,7 @@ html, body {
 
 /*BOX Classes*/
 .box {
-    /*border: 1px solid #81AAFF;*/
     width: 350px;
-    /*background: black linear-gradient(*/
-    /*        to bottom,*/
-    /*        rgb(17, 17, 17) 0%,*/
-    /*        rgb(17, 17, 17) 100%*/
-    /*);*/
 }
 .box.banner {
     position: relative;     /* needed for buttons to float */

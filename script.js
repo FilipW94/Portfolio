@@ -42,7 +42,7 @@ function prevBanner() {
 }
 document.addEventListener("DOMContentLoaded", function () {
 
-    const listItems = document.querySelectorAll(".project-contribution-list li");
+    const listItems = document.querySelectorAll(".entry-button");
     const contentBox = document.getElementById("contentBox");
 
     listItems.forEach(item => {
@@ -60,9 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.add("active");
         });
     });
-
 });
+const firstButton = document.querySelector(".entry-button");
 
+if (firstButton) {
+    firstButton.classList.add("active");
+
+    const key = firstButton.getAttribute("data-key");
+    const template = document.getElementById(`${key}-content`);
+
+    if (template) {
+        contentBox.innerHTML = template.innerHTML;
+    }
+}
 document.addEventListener("DOMContentLoaded", function () {
 
     const lightbox = document.getElementById("lightbox");
