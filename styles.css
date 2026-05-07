@@ -8,8 +8,11 @@
     display: flex;
     text-align: center;
     font-size: 25px;
-    font-family: 'Calibri', Times, sans-serif;
-    font-weight: bold;
+    /*font-family: 'Calibri', Times, sans-serif;*/
+    /*font-weight: bold;*/
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 5px 5px 5px 10px;
     padding-left: 5px;
 }
@@ -23,6 +26,8 @@
     font-style: normal;
     padding-left: 15px;
     padding-right: 15px;
+    letter-spacing: 0.01em;
+    
 }
 .text.preview-content.bold {
     font-weight: bold;
@@ -31,18 +36,28 @@
     margin-top: 3px;
     text-align: left;
     font-size: 20px;
-    font-family: 'Calibri', Times, serif;
+    /*font-family: 'Calibri', Times, serif;*/
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
     padding-left: 15px;
 }
 .text.preview-content.list {
     margin: 10px 0 0 20px;
 }
 .label.details {
+    font-family: "Lato", serif;
+    font-style: normal;
     font-weight: 700;
     text-align: left;
+    font-size: 20px;
 }
 .value.details {
     text-align: left;
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .header-text {
@@ -62,7 +77,6 @@
 .nav-title {
     display: flex;
     align-items: center;
-
     font-family: 'Calibri Light', Times, serif;
     font-size: 30px;         /* name size */
     font-weight: 700;         /* bold name */
@@ -304,7 +318,9 @@ html, body {
     text-align: left;
     font-size: 20px;
     color: white;
-    font-family: 'Calibri Light', Times, serif;
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
     transition: transform 0.2s ease;
 }
 
@@ -433,35 +449,25 @@ html, body {
     height: 360px;
 }
 .box.project-details {
-    border-top: 0;
     height: 225px;
 }
 .box.project-subjects {
-    border-top: 0;
     height: 150px;
 }
 .box.project-description {
     height: 275px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
 }
 .box.button {
     height: 100px;
 }
-
 .box.contribution {
     height: 375px;
-    border-top: 0;
 }
 .box.button {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100px;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
 }
 .box.project-info-left {
     height: 360px;
@@ -479,8 +485,6 @@ html, body {
 .box.project-info-even {
     width: 505px;
     height: 300px;
-    border-top: 0;
-    border-bottom: 0;
 }
 .box.project-info-even-small {
     width: 505px;
@@ -628,4 +632,11 @@ html, body {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+}
+.pdf {
+    display: block;
+    width: 800px;
+    height: 1200px;
+    margin: 0 auto;
+    aspect-ratio: 2480 / 3508;
 }
