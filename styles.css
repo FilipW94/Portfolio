@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
 /*<-- TEXT Classes ->>*/
 .text.preview-header {
     color: #81AAFF;
@@ -14,10 +14,13 @@
     padding-left: 5px;
 }
 .text.preview-content {
-    margin: 4px 0 0 0;    /* small top margin */
+    margin: 4px 0 0 0;
     text-align: left;
     font-size: 20px;
-    font-family: 'Calibri Light', Times, serif;
+    /*font-family: 'Calibri Light', Times, serif;*/
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
     padding-left: 15px;
     padding-right: 15px;
 }
