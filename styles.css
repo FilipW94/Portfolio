@@ -72,6 +72,11 @@
 .header-text.center {
     text-align: center;
 }
+.header-text.about {
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 10px;
+}
 .nav-title {
     display: flex;
     align-items: center;
@@ -235,12 +240,13 @@ html, body {
 
 .about-image {
     flex: 0 0 250px;              /* fixed width for image */
+
 }
 .about-image img {
 
     width: 250px;                  /* image fills container */
     height: auto;                 /* maintain aspect ratio */
-    border-radius: 1px;           /* optional rounded corners */
+    border-radius: 12px;           /* optional rounded corners */
 }
 /*<-- ABOUT PAGE Classes END ->>*/
 
@@ -644,6 +650,7 @@ html, body {
 }
 .pdf {
     display: block;
+    padding-top: 25px;
     width: 800px;
     height: 1200px;
     margin: 0 auto;
