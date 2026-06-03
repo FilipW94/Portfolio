@@ -7,16 +7,24 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <div class="navbar">
     <button class="nav-title" onclick="location.href='index.html'">
         Filip Wilhelmsson <span class="nav-role">| Technical & UI/UX Designer</span>
     </button>
     <div class="nav-right">
-        <button class="nav-button selected" onclick="location.href='index.html'">Portfolio</button>
+        <div class="dropdown">
+            <button class="nav-button">Portfolio</button>
+
+            <div class="dropdown-content">
+                <a href="index.html">Front Page</a>
+                <a href="dino-dynasty-evolved.html">Dino Dynasty: Evolved</a>
+                <a href="GameMap.html">Game Map</a>
+                <a href="BecomingWhole.html">Becoming Whole</a>
+            </div>
+        </div>
         <button class="nav-button" onclick="location.href='Resume.html'">Resume</button>
         <button class="nav-button" onclick="location.href='Contact.html'">Contact</button>
-        <button class="nav-button" onclick="location.href='About.html'">About me</button>
+        <button class="nav-button selected" onclick="location.href='About.html'">About me</button>
     </div>
 </div>
 

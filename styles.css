@@ -656,3 +656,66 @@ html, body {
     margin: 0 auto;
     aspect-ratio: 2480 / 3508;
 }
+/*CAROUSEL*/
+.banner.games {
+    border: 0;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 90s linear infinite;
+}
+
+.track img {
+    
+    width: 350px;
+    height: 90%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/*Portfolio Dropdown*/
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-family: 'Calibri Light', Times, serif;
+    min-width: 180px;
+    background-color: rgba(17, 17, 17, 0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-size: 20px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background: #f2f2f2;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

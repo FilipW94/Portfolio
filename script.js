@@ -99,3 +99,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const images = [
+    "images/FavoriteGames/D2R.jpg",
+    "images/FavoriteGames/DQ11.jpg",
+    "images/FavoriteGames/EldenRing.png",
+    "images/FavoriteGames/Fallout4.jpg",
+    "images/FavoriteGames/HaloReach.png",
+    "images/FavoriteGames/L4D.png",
+    "images/FavoriteGames/MonsterTrain.jpg",
+    "images/FavoriteGames/NierAutomata.png",
+    "images/FavoriteGames/OcarinaOfTime.jpeg",
+    "images/FavoriteGames/OctopathTraveler.png",
+    "images/FavoriteGames/RERequiem.jpg",
+    "images/FavoriteGames/StateOfDecay2.jpg",
+    "images/FavoriteGames/WowClassic.jpg",
+];
+
+const track = document.getElementById("track");
+
+// Add images twice
+[...images, ...images].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    track.appendChild(img);
+});

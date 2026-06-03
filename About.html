@@ -12,7 +12,16 @@
         Filip Wilhelmsson <span class="nav-role">| Technical & UI/UX Designer</span>
     </button>
     <div class="nav-right">
-        <button class="nav-button" onclick="location.href='index.html'">Portfolio</button>
+        <div class="dropdown">
+            <button class="nav-button">Portfolio</button>
+
+            <div class="dropdown-content">
+                <a href="index.html">Front Page</a>
+                <a href="dino-dynasty-evolved.html">Dino Dynasty: Evolved</a>
+                <a href="GameMap.html">Game Map</a>
+                <a href="BecomingWhole.html">Becoming Whole</a>
+            </div>
+        </div>
         <button class="nav-button" onclick="location.href='Resume.html'">Resume</button>
         <button class="nav-button" onclick="location.href='Contact.html'">Contact</button>
         <button class="nav-button selected" onclick="location.href='About.html'">About me</button>
@@ -27,16 +36,6 @@
             <div class="about-image">
                 <div class="about-image-container"></div>
                 <img src="Images/FilipWilhelmsson.jpg" alt="Filip Wilhelmsson" />
-<!--                <p class = "header-text"> Favorite Games:<p>-->
-<!--                <p class="text preview-content">-->
-<!--                    Dragon Quest XI<br>-->
-<!--                    Resident Evil series<br>-->
-<!--                    Octopath Traveler series<br>-->
-<!--                    Monster Train series<br>-->
-<!--                    Zelda: Ocarina of Time<br>-->
-<!--                    Fallout 4<br>-->
-<!--                    Elden Ring<br>-->
-<!--                <p>-->
             </div>
         </div>
         <div class="box about-me-right">
@@ -55,19 +54,14 @@
                 It rewards <strong class="strong-text blue">curiosity</strong> in terms of 
                 flavor combinations and <strong class="strong-text blue">iterating</strong> on recipes make them even better!
             </p>
-            <br><br>
+            <br><br><br><br><br><br><br><br><br>
             <h1 class="header-text about">Favorite Games</h1>
-            <p class="text preview-content">
-                Dragon Quest XI<br>
-                Resident Evil series<br>
-                Octopath Traveler series<br>
-                Monster Train series<br>
-                Zelda: Ocarina of Time<br>
-                Fallout 4<br>
-                Elden Ring<br>
-            <p>
         </div>
     </div>
+    
+</div>
+<div class="banner games">
+    <div class="track" id="track"></div>
 </div>
 <script src="script.js"></script>
 </body>
